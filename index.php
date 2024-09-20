@@ -1,7 +1,7 @@
 <?php
 $servername = "sql12.freesqldatabase.com";
 $username = "sql12732310";
-$password = "Z8ht7Jsge2";
+$password = "Z8ht7Jsge2"
 $database = "sql12732310";
 $port = 3306;
 
