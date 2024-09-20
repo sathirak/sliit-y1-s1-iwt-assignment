@@ -1,0 +1,134 @@
+@import url('global.css');
+
+/* Heading Styles */
+
+.heading {
+  color: var(--app-primary);
+  margin: 0.5rem 0.75rem;
+}
+
+/* Header Styles */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--app-secondary);
+  color: var(--app-white);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Header Menu Styles */
+
+.nav {
+  flex: 1;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: var(--app-white);
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: var(--app-active);
+}
+
+/* Button Styles */
+
+.special-button {
+  background-color: var(--app-special);
+  border: none;
+  padding: 10px 20px;
+  color: var(--app-white);
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 200ms ease-in;
+}
+
+.special-button:hover {
+  background-color: var(--app-active);
+}
+
+/* Footer Styles */
+
+.footer {
+  background-color: var(--app-secondary);
+  color: var(--app-white);
+  padding: 40px 0 0 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-logo h3 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+.footer-links ul li a {
+  color: var(--app-white);
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: var(--app-active);
+}
+
+.footer-social a {
+  color: var(--app-white);
+  font-size: 20px;
+  margin: 0 10px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: var(--app-active);
+}
+
+.footer-bottom {
+  padding: 20px 0;
+  background-color: var(--app-tertiary);
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+}

@@ -1,3 +1,20 @@
+:root {
+  --app-bg: #ffffff;
+  --app-white: white;
+  --app-primary: #fbbf24;
+  --app-secondary: #333;
+  --app-tertiary: #222;
+  --app-special: #ff6b6b;
+  --app-active: #ff3d3d;
+  --font-size-large: 24px;
+  --font-size-small: 14px;
+}
+
 body {
     margin: 0;
+    background-color: var(--app-bg);
+}
+
+main {
+    min-height: 80vh;
 }
