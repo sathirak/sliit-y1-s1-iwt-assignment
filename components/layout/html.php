@@ -7,3 +7,5 @@
     rel="stylesheet">
 <link rel="stylesheet" href="styles/global.css">
 <link rel="stylesheet" href="styles/components.css">
+<!-- aboutus page's stylesheet-->
+ <link rel="stylesheet" href="styles.css">

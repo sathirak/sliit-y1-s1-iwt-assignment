@@ -1,0 +1,38 @@
+.main-section{
+    background-color: #f87c7c;
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.section{
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.section-content{
+    max-width: 1500px;
+    display: flex;
+    gap: 50px;
+}
+
+.section-p{
+    flex: 1;
+}
+
+.section-p h2 {
+    font-size: 40px;
+    color: #333;
+}
+
+.section-p p {
+    font-size: 20px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.i img {
+    border-radius: 10px;
+}
+
