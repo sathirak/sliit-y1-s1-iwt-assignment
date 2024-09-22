@@ -11,7 +11,7 @@ session_start();
     <link rel="stylesheet" href="styles.css">
 
     <?php
-    include "components/layout/html.php";
+    include "../components/layout/html.php";
     ?>
 
 </head>
@@ -19,7 +19,7 @@ session_start();
 <body>
 
     <?php
-    include "components/layout/header.php";
+    include "../components/layout/header.php";
     ?>
 
     <main>
@@ -34,7 +34,7 @@ session_start();
                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
                 </div>
                 <div class="i">
-                    <img src="assests/images/aboutus.jpg" alt="about us image">
+                    <img src="../assets/images/aboutus.jpg" alt="about us image">
                 </div>
             </div>
         </div>
@@ -42,7 +42,7 @@ session_start();
         <div class="section" style="background-color: #ffb1b1;">
             <div class="section-content">
                 <div class="i">
-                    <img src="assests/images/ourmission.jpg" alt="our mission image">
+                    <img src="../assets/images/ourmission.jpg" alt="our mission image">
                 </div>
                 <div class="section-p">
                     <h2>Our Mission</h2>
@@ -58,7 +58,7 @@ session_start();
                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
                 </div>
                 <div class="i">
-                    <img src="assests/images/ourvalues.jpg" alt="our values image">
+                    <img src="../assets/images/ourvalues.jpg" alt="our values image">
                 </div>
             </div>
         </div>
@@ -68,7 +68,7 @@ session_start();
 
 
     <?php
-    include "components/layout/footer.php";
+    include "../components/layout/footer.php";
     ?>
 
 </body>
