@@ -7,10 +7,10 @@ session_start();
 
 <head>
     <title>User Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
 
-    <?php
-    include "components/layout/html.php";
-    ?>
+    <link rel="stylesheet" href="../styles/components.css">
+
 </head>
 
 <body>
@@ -108,7 +108,7 @@ session_start();
 
         <div class="footer">
             <?php
-            include "components/layout/footer.php";
+            include "../components/layout/footer.php";
             ?>
         </div>
     </div>
