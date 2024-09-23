@@ -2,7 +2,10 @@
 
 <head>
     <title>AcademiX | All Courses</title>
-    <link rel="stylesheet" href="all-courses.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/all-courses.css">
+
     <?php
     include "../components/layout/html.php";
     ?>
@@ -23,12 +26,12 @@
 
         <div class="search-bar">
             <input type="text" placeholder="Search Courses...">
-            <button id="searchBtn">🔍</button>
+            <button id="search-button">Search</button>
         </div>
 
         <div class="courses-list">
             <div class="course-item">
-                <p>Course Title 1</p>
+                <p>Physics with Samitha Rathnayake</p>
                 <div class="course-thumbnail">Course</div>
                 <div class="course-details">
                     <button class="go-to-course">Go to Course</button>
@@ -37,8 +40,8 @@
             </div>
 
             <div class="course-item">
-                <p>Course Title 2</p>
-                <div class="course-thumbnail">Course</div>
+                <p>Introductory Mathematics for A/Ls</p>
+                <img class="course-thumbnail" src="../assets/images/maths-introductory.jpg" alt="">
                 <div class="course-details">
                     <button class="go-to-course">Go to Course</button>
                     <p>Subject Name</p>

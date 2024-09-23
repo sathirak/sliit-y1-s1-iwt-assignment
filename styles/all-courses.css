@@ -1,18 +1,32 @@
 .search-bar {
     display: flex;
     margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .search-bar input {
-    width: 300px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    width: 70%;
+    padding: 10px;
+    padding-inline: 20px;
+    border-radius: 1rem 0rem 0rem 1rem;
+    border: none;
+    background-color: var(--app-white);
+    font-size: large;
 }
 
-#searchBtn {
+#search-button {
     padding: 5px;
     cursor: pointer;
+    background-color: var(--app-white);
+    border: none;
+    border-radius: 0rem 1rem 1rem 0rem;
+    font-size: large;
+    padding-inline: 20px;
+}
+#search-button:hover {
+    background-color: #ccc;
 }
 
 .courses-list {
@@ -31,9 +45,10 @@
 }
 
 .course-thumbnail {
-    width: 80px;
-    height: 80px;
+    width: 180px;
+    height: 180px;
     background-color: #ddd;
+    border-radius: 1rem;
     text-align: center;
     line-height: 80px;
 }
