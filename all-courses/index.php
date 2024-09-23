@@ -2,7 +2,7 @@
 
 <head>
     <title>AcademiX | All Courses</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="all-courses.css">
     <?php
     include "../components/layout/html.php";
     ?>
