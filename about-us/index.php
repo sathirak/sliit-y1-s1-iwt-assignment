@@ -39,7 +39,7 @@ session_start();
             </div>
         </div>
 
-        <div class="section" style="background-color: #ffb1b1;">
+        <div class="section" style="background-color: #cce4fc;">
             <div class="section-content">
                 <div class="i">
                     <img src="../assets/images/ourmission.jpg" alt="our mission image">
