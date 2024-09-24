@@ -8,7 +8,9 @@ session_start();
 <head>
 
     <title>About-Us</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/about-us.css">
 
     <?php
     include "../components/layout/html.php";
@@ -31,7 +33,10 @@ session_start();
             <div class="section-content">
                 <div class="section-p">
                     <h2>About Us</h2>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form, by injected humour, or randomised words which don't look even slightly
+                        believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                        anything embarrassing hidden in the middle of text.</p>
                 </div>
                 <div class="i">
                     <img src="../assets/images/aboutus.jpg" alt="about us image">
@@ -46,7 +51,10 @@ session_start();
                 </div>
                 <div class="section-p">
                     <h2>Our Mission</h2>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form, by injected humour, or randomised words which don't look even slightly
+                        believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                        anything embarrassing hidden in the middle of text.</p>
                 </div>
             </div>
         </div>
@@ -55,7 +63,10 @@ session_start();
             <div class="section-content">
                 <div class="section-p">
                     <h2>Our Values</h2>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form, by injected humour, or randomised words which don't look even slightly
+                        believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                        anything embarrassing hidden in the middle of text.</p>
                 </div>
                 <div class="i">
                     <img src="../assets/images/ourvalues.jpg" alt="our values image">
