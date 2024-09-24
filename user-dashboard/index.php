@@ -6,11 +6,15 @@ session_start();
 <html lang="en">
 
 <head>
+    <?php
+    include "../components/layout/html.php";
+    ?>
     <title>User Dashboard</title>
+
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/components.css">
     <link rel="stylesheet" href="../styles/user-dashboard.css">
-    
+    <link rel="stylesheet" href="../styles/components/search-bar.css">
 
 </head>
 
@@ -21,7 +25,7 @@ session_start();
         </div>
 
         <div>
-            <ul>
+            <ul class="sidebar-container">
                 <li>Dashboard</li>
                 <li>My Courses</li>
                 <li>Explore Courses</li>
@@ -33,73 +37,75 @@ session_start();
     </div>
 
     <div class="container">
-        <div class="header-2">
-            <div class="nav">
-                <div class="search">
-                    <input type="text" placeholder="Search Here">
-                    <button type="submit"><img src="../assets/images/search-img.jpg" alt="search icon"></button>
-                </div>
-                <div class="user">
-                    <a href="#" class="special-button">Profile</a>
-                    <img src="../assets/images/notifications.png" alt="notifications">
-                    <div class="../assets/images/pro-pic">
-                        <img src="../assets/images/user-img.png" alt="pro pic">
-                    </div>
-                </div>
+
+        <!-- header -->
+        <header class="header-user">
+
+
+            <div class="search-bar">
+                <input type="text" placeholder="Search Courses...">
+                <button id="search-button">Search</button>
             </div>
-        </div>
+
+            <div class="user">
+                <a href="#" class="special-button">Profile</a>
+            </div>
+
+
+        </header>
+
         <div class="content">
 
             <div class="content-2">
                 <h1>Upcoming Courses</h1>
                 <div class="upcome">
-                    <div class="new-event">
+                    <div class="welcome">
                         <h4>Welcome back, Thilu</h4>
                     </div>
 
                     <div class="cards">
-                        <div class="card-1">
+                        <div class="card shadow">
                             <div class="box-1">
                                 <h2>My Courses</h2>
                                 <h3>Course To Do</h3>
                             </div>
                             <div class="icon-case">
-                                <img src="../assets/images/course.png" alt="courses">
+                                <img src="../assets/icons/course.png" alt="courses">
                             </div>
                         </div>
 
-                        <div class="card-1">
+                        <div class="card shadow">
                             <div class="box-1">
                                 <h2>Completed</h2>
                                 <h3>Learned Courses</h3>
                             </div>
                             <div class="icon-case">
-                                <img src="../assets/images/completed.webp" alt="complete">
+                                <img src="../assets/icons/completed.webp" alt="complete">
                             </div>
                         </div>
 
-                        <div class="card-1">
+                        <div class="card shadow">
                             <div class="box-1">
                                 <h2>My Status</h2>
                                 <h3>Progress</h3>
                             </div>
                             <div class="icon-case">
-                                <img src="../assets/images/graph.png" alt="graph">
+                                <img src="../assets/icons/graph.png" alt="graph">
                             </div>
                         </div>
 
-                        <div class="card-1">
+                        <div class="card shadow">
                             <div class="box-1">
                                 <h2>Watch Time</h2>
                                 <h3>Total minutes</h3>
                             </div>
                             <div class="icon-case">
-                                <img src="../assets/images/watch-time.webp" alt="watch-time">
+                                <img src="../assets/icons/watch-time.webp" alt="watch-time">
                             </div>
                         </div>
                     </div> <br><br>
                     <div class="content-2">
-                        <h1>Upcoming Courses</h1>
+                        <h1>My Courses</h1>
                         <div class="upcome">
                             <div class="new-event">
                                 <h4>Course - 01</h4>

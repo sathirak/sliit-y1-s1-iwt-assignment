@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 
 <head>
-    <title>AcademiX | All Courses</title>
-    <link rel="stylesheet" href="../styles/global.css">
-    <link rel="stylesheet" href="../styles/components.css">
-    <link rel="stylesheet" href="../styles/all-courses.css">
 
     <?php
     include "../components/layout/html.php";
     ?>
+    <title>AcademiX | All Courses</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/all-courses.css">
+    <link rel="stylesheet" href="../styles/components/search-bar.css">
+
 </head>
 
 <body>
@@ -24,7 +26,7 @@
             Browse all of our courses
         </h1>
 
-        <div class="search-bar">
+        <div class="search-bar search-bar-margin">
             <input type="text" placeholder="Search Courses...">
             <button id="search-button">Search</button>
         </div>

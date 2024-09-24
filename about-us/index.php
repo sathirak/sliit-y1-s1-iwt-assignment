@@ -6,15 +6,14 @@ session_start();
 <html lang="en">
 
 <head>
+    <?php
+    include "../components/layout/html.php";
+    ?>
 
     <title>About-Us</title>
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/components.css">
     <link rel="stylesheet" href="../styles/about-us.css">
-
-    <?php
-    include "../components/layout/html.php";
-    ?>
 
 </head>
 
