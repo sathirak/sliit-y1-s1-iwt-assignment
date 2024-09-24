@@ -32,7 +32,7 @@
         <div class="courses-list">
             <div class="course-item">
                 <p>Physics with Samitha Rathnayake</p>
-                <div class="course-thumbnail">Course</div>
+                <img class="course-thumbnail" src="../assets/images/physics.jpg" alt="">
                 <div class="course-details">
                     <button class="go-to-course">Go to Course</button>
                     <p>Subject Name</p>
@@ -41,7 +41,7 @@
 
             <div class="course-item">
                 <p>Introductory Mathematics for A/Ls</p>
-                <img class="course-thumbnail" src="../assets/images/maths-introductory.jpg" alt="">
+                <img class="course-thumbnail" src="../assets/images/maths.jpg" alt="">
                 <div class="course-details">
                     <button class="go-to-course">Go to Course</button>
                     <p>Subject Name</p>

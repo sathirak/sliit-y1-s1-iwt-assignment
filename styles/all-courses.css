@@ -35,9 +35,10 @@
 }
 
 .course-item {
+    font-weight: bold;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:flex-start;
     margin-bottom: 20px;
     padding: 15px;
     border: 1px solid #ccc;
@@ -45,12 +46,9 @@
 }
 
 .course-thumbnail {
-    width: 180px;
-    height: 180px;
-    background-color: #ddd;
-    border-radius: 1rem;
-    text-align: center;
-    line-height: 80px;
+   width: 150px;
+   height: auto;
+   object-fit: cover;
 }
 
 .course-details {
@@ -60,10 +58,13 @@
 }
 
 .go-to-course {
-    padding: 5px 10px;
+    padding: 10px 5px;
     margin-bottom: 5px;
-    background-color: #333;
+    border-radius: 5px;
+    text-align: center;
+    background-color:rgb(90, 106, 248);
     color: white;
     border: none;
     cursor: pointer;
+    display: flex;
 }
