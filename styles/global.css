@@ -9,6 +9,7 @@
   --app-active: #cfd9e9;
   --font-size-large: 24px;
   --font-size-small: 14px;
+  --transition: all 300ms ease;
 }
 
 body {
@@ -21,3 +22,4 @@ main {
     min-height: 80vh;
     padding: 20px;
 }
+

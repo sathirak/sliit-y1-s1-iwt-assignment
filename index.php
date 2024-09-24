@@ -29,6 +29,7 @@ session_start();
                     Empowering Educators, Shaping Futures
                 </h1>
                 <p class="main-para">Learn from hundreds of educational courses made by seasoned professionals to improve your teaching skills</p>
+                <a href="/all-courses"><button class="button">Get Started</button></a>
             </div>
 
 

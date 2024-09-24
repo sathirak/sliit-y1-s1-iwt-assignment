@@ -55,15 +55,31 @@
 
 /* Button Styles */
 
+.button {
+  border: none;
+  padding: 10px 20px;
+  background-color: var(--app-primary);
+  color: var(--app-white);
+  border-radius: 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.button:hover {
+  background-color: var(--app-white);
+  color: var(--app-primary);
+}
+
 .special-button {
   background-color: var(--app-white);
   border: none;
   padding: 10px 20px;
   color: var(--app-primary);
   font-weight: bold;
+  border-radius: 2rem;
   cursor: pointer;
-  border-radius: 1.5rem;
-  transition: background-color 200ms ease-in;
+  transition: var(--transition);
 }
 
 .special-button:hover {
@@ -151,7 +167,7 @@
   width: 100%;
   margin-top: 40px;
   display: flex;
-  gap:50px;
+  gap: 50px;
   justify-content: center;
   align-items: center;
 }
