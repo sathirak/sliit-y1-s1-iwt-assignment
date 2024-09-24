@@ -2,9 +2,7 @@
 <html lang="en">
   <head>
     <?php include "../components/layout/html.php"; ?>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>FAQ</title>
 
     <link rel="stylesheet" href="../styles/global.css" />
     <link rel="stylesheet" href="../styles/components.css" />
