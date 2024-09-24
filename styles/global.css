@@ -1,11 +1,11 @@
 :root {
   --app-bg: #ffffff;
   --app-white: white;
-  --app-primary: #fbbf24;
+  --app-primary: #006cff;
   --app-secondary: #333;
-  --app-tertiary: #222;
-  --app-special: #ff6b6b;
-  --app-active: #ff3d3d;
+  --app-text: #222;
+  --app-special: #e6f0ff;
+  --app-active: #cfd9e9;
   --font-size-large: 24px;
   --font-size-small: 14px;
 }
