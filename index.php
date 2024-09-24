@@ -12,7 +12,8 @@ session_start();
     <?php
     include "components/layout/html.php";
     ?>
-
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/components.css">
 </head>
 
 <body>
@@ -22,9 +23,18 @@ session_start();
     ?>
 
     <main>
-        <h1 class="heading">
-            Heading
-        </h1>
+        <div class="main-container">
+            <div>
+                <h1 class="heading">
+                    Empowering Educators, Shaping Futures
+                </h1>
+                <p class="main-para">Learn from hundreds of educational courses made by seasoned professionals to improve your teaching skills</p>
+                <a href="/all-courses"><button class="button">Get Started</button></a>
+            </div>
+
+
+            <img class="main-banner" src="/assets/images/main.jpg" alt="Main Banner of Academix">
+        </div>
 
     </main>
 
