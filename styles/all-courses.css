@@ -7,11 +7,11 @@
 }
 
 .search-bar input {
-  width: 70%;
+  width: 50%;
   padding: 10px;
   padding-inline: 20px;
   border-radius: 1rem 0rem 0rem 1rem;
-  border: none;
+  border: 2px solid var(--app-mute);
   background-color: var(--app-white);
   font-size: large;
 }
@@ -19,14 +19,15 @@
 #search-button {
   padding: 5px;
   cursor: pointer;
-  background-color: var(--app-white);
+  background-color: var(--app-primary);
+  color: var(--app-white);
   border: none;
   border-radius: 0rem 1rem 1rem 0rem;
   font-size: large;
   padding-inline: 20px;
 }
 #search-button:hover {
-  background-color: #ccc;
+  background-color: var(--app-mute);
 }
 
 .courses-list {
@@ -41,7 +42,7 @@
   align-items: flex-start;
   margin-bottom: 20px;
   padding: 15px;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--app-mute);
   width: 70%;
 }
 
@@ -76,16 +77,16 @@
   margin-bottom: 5px;
   border-radius: 5px;
   width: max-content;
-  background-color: white;
+  background-color: var(--app-white);
   font-weight: bold;
   font-size: 18px;
-  color: rgb(90, 106, 248);
+  color: var(--app-primary);
   border: none;
   cursor: pointer;
   transition: all 200ms ease;
 }
 
 .go-to-course:hover {
-  color: white;
-  background-color: rgb(90, 106, 248);
+  color: var(--app-white);
+  background-color:var(--app-primary);
 }

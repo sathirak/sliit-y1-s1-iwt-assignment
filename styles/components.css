@@ -91,6 +91,7 @@
 .footer-logo h3 {
   font-size: 24px;
   margin: 0;
+  color: var(--app-primary);
 }
 
 .footer-links ul {
