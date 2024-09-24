@@ -7,9 +7,10 @@ session_start();
 
 <head>
     <title>User Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
-
+    <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/user-dashboard.css">
+    
 
 </head>
 
