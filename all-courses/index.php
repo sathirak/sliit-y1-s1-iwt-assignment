@@ -31,22 +31,31 @@
 
         <div class="courses-list">
             <div class="course-item">
-                <p>Physics with Samitha Rathnayake</p>
-                <img class="course-thumbnail" src="../assets/images/physics.jpg" alt="">
-                <div class="course-details">
+                <div class="course-container">
+                    <div>
+                        <p class="course-title">Physics with Samitha Rathnayake</p>
+                        <p class="course-subject">Subject Name</p>
+                    </div>
+
                     <button class="go-to-course">Go to Course</button>
-                    <p>Subject Name</p>
                 </div>
+
+                <img class="course-thumbnail" src="../assets/images/physics.jpg" alt="">
             </div>
 
             <div class="course-item">
-                <p>Introductory Mathematics for A/Ls</p>
-                <img class="course-thumbnail" src="../assets/images/maths.jpg" alt="">
-                <div class="course-details">
+                <div class="course-container">
+                    <div>
+                        <p class="course-title">Introductory Mathematics for A/Ls</p>
+                        <p class="course-subject">Mathematics</p>
+                    </div>
+
                     <button class="go-to-course">Go to Course</button>
-                    <p>Subject Name</p>
                 </div>
+
+                <img class="course-thumbnail" src="../assets/images/maths.jpg" alt="">
             </div>
+
         </div>
     </main>
 
