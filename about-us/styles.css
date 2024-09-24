@@ -1,0 +1,44 @@
+.main-section{
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.main-section h1{    font-size: 45px;
+}
+
+.section{
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.section-content{
+    max-width: 1500px;
+    display: flex;
+    gap: 50px;
+}
+
+.section-p{
+    flex: 1;
+}
+
+.section-p h2 {
+    font-size: 40px;
+    color: #000000;
+}
+
+.section-p p {
+    font-size: 25px;
+    color: #000000;
+    line-height: 1.6;
+}
+
+.i img {
+    border-radius: 30px;
+    
+}
+
