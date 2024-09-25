@@ -9,9 +9,7 @@ session_start();
 
     <title>Academix</title>
 
-    <?php
-    include "components/layout/html.php";
-    ?>
+    <?php include "components/layout/html.php";  ?>
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/components.css">
 </head>
