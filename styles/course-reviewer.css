@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #2196f3;
+    color: #fff;
+    height: 100vh;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.review-section {
+    margin-top: 20px;
+}
+
+.review-section h1 {
+    margin-bottom: 20px;
+}
+
+.course-card {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-top: 1px solid var(--app-mute);
+    width: 100%;
+}
+
+.course-icon img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-left: 25px;
+    border-radius: 1rem;
+}
+
+.course-details {
+    font-weight: normal;
+    font-size: 14px;
+    margin: 0;
+}
+
+
