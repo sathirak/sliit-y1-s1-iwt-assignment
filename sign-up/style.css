@@ -22,7 +22,6 @@ h3 {
 .signup-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 100vh;
 }
 
 .imag,
@@ -31,17 +30,18 @@ h3 {
 }
 
 .imag {
-    align-content: center;
+    text-align: right;
+    align-content:center;
 }
 
 .content {
     align-content: stretch;
-    /* text-align: center; */
     padding: 10px;
+    height: 100vh;
 }
 
 .start {
-    text-align: center;
+    text-align: right;
     padding: 50px;
     align-items: center;
 }
@@ -76,6 +76,7 @@ h3 {
 
 .head {
     text-align: center;
+    padding-bottom: 20px;
 }
 
 .logo img {
@@ -88,6 +89,13 @@ h3 {
     padding-top: 50px;
     padding-right: 20px;
     padding-bottom: 30px;
+}
+.form-signup{
+    padding-left: 100px;
+}
+form {
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .fname,
@@ -106,17 +114,19 @@ input[type=text] {
     display: inline-block;
     border: none;
     background: #f1f1f1;
+    border-radius: 20px;
 }
 
 input[type=password],
 input[type=email],
-input[type=number] {
+.para-1 input[type=text] {
     width: 80%;
     padding: 15px;
     margin: 5px 0 5px 0;
     display: inline-block;
     border: none;
     background: #f1f1f1;
+    border-radius: 20px;
 }
 
 .dropdown {
@@ -160,11 +170,7 @@ input[type=number] {
     display: block;
 }
 
-/* .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-} */
-
-.check p{
+.check p {
     text-align: justify;
     width: 80%;
 }

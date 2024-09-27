@@ -58,20 +58,20 @@ session_start()
                             </div>
                         </div>
 
-                        <div class="para-1">
+                        <div class="para">
                             <label for="email">Email Address</label><br>
                             <input type="email" id="email" name="email" placeholder="Enter email address" required>
                         </div>
 
                         <div class="para-1">
                             <label for="contact">Contact Number</label><br>
-                            <input type="number" id="contact" name="contact" placeholder="Enter contact number"
+                            <input type="text" id="contact" name="contact" placeholder="Enter contact number"
                                 required>
                         </div>
                         <br>
 
                         <div class="dropdown">
-                            <button id="dropbtn">Teacher at</button>
+                            <button id="dropbtn" class="dropbtn" >Teacher At</button>
                             <div class="dropdown-content">
                                 <a href="#">Private School</a>
                                 <a href="#">Government School</a>
