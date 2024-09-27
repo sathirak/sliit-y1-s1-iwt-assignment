@@ -192,7 +192,7 @@ input[type=submit] {
     transition: var(--transition);
 }
 
-.button:hover {
+.button:hover, .button-signup:hover{
     background-color: var(--app-white);
     color: var(--app-primary);
 }

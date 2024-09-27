@@ -125,7 +125,8 @@ input[type=email] {
 input[type=submit] {
     width: 80%;
 }
-.button-signin{
+
+.button-signin {
     border: none;
     padding: 10px 20px;
     background-color: var(--app-primary);
@@ -136,7 +137,7 @@ input[type=submit] {
     transition: var(--transition);
 }
 
-.button:hover {
+.button:hover, .button-signin:hover{
     background-color: var(--app-white);
     color: var(--app-primary);
 }
