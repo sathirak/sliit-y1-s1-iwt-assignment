@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--app-primary);
+}
+
+/*Left Side */
+.signup-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.imag,
+.content {
+    padding: 10px;
+}
+
+.imag {
+    text-align: center;
+    align-content: center;
+}
+
+.content {
+    align-content: stretch;
+    padding: 10px;
+    height: 100vh;
+}
+
+.start {
+    text-align: center;
+    padding: 20px;
+    align-items: center;
+}
+
+.image_1 img {
+    width: 650px;
+    height: 500px;
+    align-items: center;
+}
+
+/* Right Side */
+
+.up {
+    float: right;
+}
+
+.button {
+    border: none;
+    padding: 5px 10px;
+    background-color: var(--app-primary);
+    color: var(--app-white);
+    border-radius: 2rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.button:hover {
+    background-color: var(--app-white);
+    color: var(--app-primary);
+}
+
+.head {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.form-content {
+    padding-left: 10px;
+    padding-top: 125px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+}
+
+.form-signup {
+    padding-left: 100px;
+}
+
+form {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input[type=password],
+input[type=email] {
+    width: 80%;
+    padding: 15px;
+    margin: 5px 0 5px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 20px;
+}
+
+.forget {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.f-pw a {
+    float: right;
+    padding-right: 120px;
+}
+
+input[type=submit] {
+    width: 80%;
+}
+.button-signin{
+    border: none;
+    padding: 10px 20px;
+    background-color: var(--app-primary);
+    color: var(--app-white);
+    border-radius: 2rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.button:hover {
+    background-color: var(--app-white);
+    color: var(--app-primary);
+}
