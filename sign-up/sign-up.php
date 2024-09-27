@@ -93,18 +93,14 @@ session_start()
                         <br>
 
                         <div class="check">
-                            <input type="checkbox" id="check" name="check" required>
+                            
                             <label for="check">
-                                <p>
-                                    Creating an account means you are aggree with our Terms of Service, Privacy Policy, and Our Default Notification
-                                    Settings.
-                                </p>
-                            </label>
+                                <input type="checkbox" id="check" name="check" required>  Creating an account means you are aggree with our Terms of Service, Privacy Policy, and Our Default Notification Settings.</label>
                         </div>
                         <br>
 
                         <div class="signup">
-                            <input type="button" class="button" onclick="alert('Hii')" value="Sign Up">
+                            <input type="submit" class="button-signup" onclick="alert('Hii')" value="Sign Up">
                         </div>
 
                     </form>

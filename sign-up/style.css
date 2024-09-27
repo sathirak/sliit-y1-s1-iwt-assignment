@@ -31,7 +31,7 @@ h3 {
 
 .imag {
     text-align: right;
-    align-content:center;
+    align-content: center;
 }
 
 .content {
@@ -60,7 +60,7 @@ h3 {
 
 .button {
     border: none;
-    padding: 10px 20px;
+    padding: 5px 10px;
     background-color: var(--app-primary);
     color: var(--app-white);
     border-radius: 2rem;
@@ -90,9 +90,11 @@ h3 {
     padding-right: 20px;
     padding-bottom: 30px;
 }
-.form-signup{
+
+.form-signup {
     padding-left: 100px;
 }
+
 form {
     padding: 20px;
     border-radius: 10px;
@@ -127,6 +129,10 @@ input[type=email],
     border: none;
     background: #f1f1f1;
     border-radius: 20px;
+}
+
+input[type=submit] {
+    width: 80%;
 }
 
 .dropdown {
@@ -170,7 +176,23 @@ input[type=email],
     display: block;
 }
 
-.check p {
+.check  {
     text-align: justify;
     width: 80%;
+}
+
+.button-signup {
+    border: none;
+    padding: 10px 20px;
+    background-color: var(--app-primary);
+    color: var(--app-white);
+    border-radius: 2rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.button:hover {
+    background-color: var(--app-white);
+    color: var(--app-primary);
 }
