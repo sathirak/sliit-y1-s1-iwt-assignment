@@ -22,9 +22,9 @@ if ($result->num_rows > 0) {
     
     while($row = $result->fetch_assoc()) {
         echo "<tr>";
-        echo "<td>" . htmlspecialchars($row["username"]) . "</td>";
-        echo "<td>" . htmlspecialchars($row["email"]) . "</td>";
-        echo "<td>" . htmlspecialchars($row["password"]) . "</td>";
+        echo "<td>" . $row["username"] . "</td>";
+        echo "<td>" . $row["email"] . "</td>";
+        echo "<td>" . $row["password"] . "</td>";
         echo "</tr>";
     }
 
