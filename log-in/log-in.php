@@ -31,7 +31,14 @@ session_start()
         <div class="content">
             <div class="up">
                 <p>Don't have an account?
-                    <input type="button" class="button" onclick="alert('hi')" value="Sign Up">
+                    <!-- <input type="button" class="button" value="Sign Up"> -->
+
+                    <button class="button" id="button">Sign In</button>
+                    <script type="text/javascript">
+                        document.getElementById("button").onclick = function () {
+                            location.href = "../sign-up/sign-up.php";
+                        };
+                    </script>
                 </p>
             </div>
 

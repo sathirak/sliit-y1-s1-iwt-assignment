@@ -31,7 +31,15 @@ session_start()
         <div class="content">
             <div class="up">
                 <p>Already a member?
-                    <input type="button" class="button" onclick="alert('hi')" value="Sign In">
+                    <button class="button" id="button">Sign In</button>
+                    <script type="text/javascript">
+                        document.getElementById("button").onclick = function () {
+                            location.href = "../log-in/log-in.php";
+                        };
+                    </script>
+
+                    <!-- <input type="button" class="button" onclick="alert('hi')" value="Sign In"> -->
+                    <!-- <a href="../log-in.php"></a> -->
                 </p>
             </div>
 
@@ -65,13 +73,12 @@ session_start()
 
                         <div class="para-1">
                             <label for="contact">Contact Number</label><br>
-                            <input type="text" id="contact" name="contact" placeholder="Enter contact number"
-                                required>
+                            <input type="text" id="contact" name="contact" placeholder="Enter contact number" required>
                         </div>
                         <br>
 
                         <div class="dropdown">
-                            <button id="dropbtn" class="dropbtn" >Teacher At</button>
+                            <button id="dropbtn" class="dropbtn">Teacher At</button>
                             <div class="dropdown-content">
                                 <a href="#">Private School</a>
                                 <a href="#">Government School</a>
@@ -93,9 +100,11 @@ session_start()
                         <br>
 
                         <div class="check">
-                            
+
                             <label for="check">
-                                <input type="checkbox" id="check" name="check" required>  Creating an account means you are aggree with our Terms of Service, Privacy Policy, and Our Default Notification Settings.</label>
+                                <input type="checkbox" id="check" name="check" required> Creating an account means you
+                                are aggree with our Terms of Service, Privacy Policy, and Our Default Notification
+                                Settings.</label>
                         </div>
                         <br>
 
