@@ -68,14 +68,29 @@
             <div class="course-item">
                 <div class="course-container">
                     <div>
-                        <p class="course-title">Infomation Technology for A/Ls</p>
-                        <p class="course-subject">Information Technology</p>
+                        <p class="course-title">Economics for A/Ls</p>
+                        <p class="course-subject">Economics</p>
                     </div>
 
                     <button class="view-details">View Details</button>  
                 </div>
 
-                <img class="course-thumbnail" src="../assets/images/th.jpeg" alt="">
+                <img class="course-thumbnail" src="../assets/images/econ.jpeg" alt="">
+            </div>
+            </div>
+
+            <div class="course-box">
+            <div class="course-item">
+                <div class="course-container">
+                    <div>
+                        <p class="course-title">Chemistry fot A/Ls</p>
+                        <p class="course-subject">Chemistry</p>
+                    </div>
+
+                    <button class="view-details">View Details</button>  
+                </div>
+
+                <img class="course-thumbnail" src="../assets/images/chem.jpeg" alt="">
             </div>
             </div>
 
