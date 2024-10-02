@@ -15,7 +15,6 @@ session_start();
     <link rel="stylesheet" href="../styles/components.css">
     <link rel="stylesheet" href="../styles/user-dashboard.css">
     <link rel="stylesheet" href="../styles/components/search-bar.css">
-
 </head>
 
 <body>
@@ -55,9 +54,9 @@ session_start();
         </header>
 
         <div class="content">
-
             <div class="content-2">
-                <h1>Upcoming Courses</h1>
+                <h1>User Dashboard</h1>
+                <!-- <h1>Upcoming Courses</h1> -->
                 <div class="upcome">
                     <div class="welcome">
                         <h4>Welcome back, Thilu</h4>
@@ -67,7 +66,7 @@ session_start();
                         <div class="card shadow">
                             <div class="box-1">
                                 <h2>My Courses</h2>
-                                <h3>Course To Do</h3>
+                                <h3>Purchased Courses</h3>
                             </div>
                             <div class="icon-case">
                                 <img src="../assets/icons/course.png" alt="courses">
@@ -86,6 +85,16 @@ session_start();
 
                         <div class="card shadow">
                             <div class="box-1">
+                                <h2>Ongoing course</h2>
+                                <h3>Course To Do</h3>
+                            </div>
+                            <div class="icon-case">
+                                <img src="../assets/icons/watch-time.webp" alt="watch-time">
+                            </div>
+                        </div>
+
+                        <div class="card shadow">
+                            <div class="box-1">
                                 <h2>My Status</h2>
                                 <h3>Progress</h3>
                             </div>
@@ -94,18 +103,9 @@ session_start();
                             </div>
                         </div>
 
-                        <div class="card shadow">
-                            <div class="box-1">
-                                <h2>Watch Time</h2>
-                                <h3>Total minutes</h3>
-                            </div>
-                            <div class="icon-case">
-                                <img src="../assets/icons/watch-time.webp" alt="watch-time">
-                            </div>
-                        </div>
                     </div> <br><br>
                     <div class="content-2">
-                        <h1>My Courses</h1>
+                        <h1 id="my-courses" >My Courses</h1>
                         <div class="upcome">
                             <div class="new-event">
                                 <h4>Course - 01</h4>
