@@ -34,7 +34,7 @@ session_start()
                     <button class="button" id="button">Sign In</button>
                     <script type="text/javascript">
                         document.getElementById("button").onclick = function() {
-                            location.href = "../log-in/log-in.php";
+                            location.href = "../sign-in";
                         };
                     </script>
                 </p>

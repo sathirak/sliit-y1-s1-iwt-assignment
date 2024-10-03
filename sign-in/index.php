@@ -33,10 +33,10 @@ session_start()
             <div class="up">
                 <p>Don't have an account?
 
-                    <button class="button" id="button">Sign In</button>
+                    <button class="button" id="button">Sign Up</button>
                     <script type="text/javascript">
                         document.getElementById("button").onclick = function() {
-                            location.href = "../sign-up/sign-up.php";
+                            location.href = "../sign-up";
                         };
                     </script>
                 </p>

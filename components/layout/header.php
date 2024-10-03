@@ -11,6 +11,6 @@
     </ul>
   </nav>
 
-  <button class="special-button">Sign Up</button>
+  <a class="special-button" href="/sign-up/">Sign Up</a>
 
 </header>
