@@ -12,7 +12,7 @@ session_start();
 
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/components.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles/privacy.css">
 
     <title>Privacy Policy</title>
 </head>
@@ -26,18 +26,12 @@ session_start();
             <div class="header-0">
                 <h3>About Us</h3>
             </div>
-            <p>Solution Infinity Pvt Ltd, Name Birth Pvt Ltd, and our subsidiaries (“we,” or “us”) are a leading
-                provider
-                of
-                online tools for small businesses to establish and build their web presence, get found in online search,
-                and
-                connect with customers through email marketing, social media, and more. We care about protecting the
-                personal
-                information of our customers and visitors who use our websites, products or services (collectively, our
-                “Users”). This privacy notice provides details about how your personal information is collected, shared
-                and
-                used
-                by us.</p>
+            <p>At AcademiX Pvt Ltd, we are dedicated to empowering educators with the skills and
+                tools they need to thrive in today ever-evolving classroom environments. Our online teacher training
+                platform provides high-quality, flexible, and comprehensive courses designed by expert educators and
+                trainers. We focus on practical, research-based strategies that enhance teaching effectiveness, promote
+                student engagement, and foster lifelong learning. Whether you're a new teacher or a seasoned educator,
+                our mission is to support your professional growth and help you make a lasting impact in education.</p>
         </div>
 
         <div class="inner">
@@ -47,7 +41,7 @@ session_start();
             <p>This privacy notice, which may also be referred to as a “privacy policy” on some of our websites, covers
                 personal information, including any information we collect, use and share from you, as described further
                 below.
-                This privacy notice applies to all websites and brands in the Solution Infinity Pvt Ltd and Name Birth
+                This privacy notice applies to all websites and brands in the AcademiX Pvt Ltd and Name Birth
                 Pvt
                 Ltd
                 family, our products and services, and our mobile applications (collectively, the “Services”). This
@@ -207,7 +201,7 @@ session_start();
             <p>As further described below, we will only share certain personal information with:</p>
             <div class="list">
                 <ul>
-                    <li>Other members of the Solution Infinity Pvt Ltd and Name Birth Pvt Ltd corporate family;</li>
+                    <li>Other members of the AcademiX Pvt Ltd corporate family;</li>
                     <li>Our partners;</li>
                     <li>Third party service providers and vendors;</li>
                     <li>In connection with a sale, merger, acquisition or corporate reorganization;</li>
@@ -215,19 +209,6 @@ session_start();
                     <li>For legal reasons.</li>
                 </ul>
             </div>
-            <div class="header-1">
-                <h4>Sharing within the Solution Infinity Pvt Ltd and Name Birth Pvt Ltd Family</h4>
-            </div>
-            <p>We share personal information with other members of the Solution Infinity Pvt Ltd and Name Birth Pvt Ltd
-                family
-                to allow our corporate affiliates to contact you with offers, services or products that may be of
-                interest
-                to
-                you and to provide you with their products and services. Any such corporate affiliate may use your
-                information
-                only according to the terms of this privacy notice. If you are located in a jurisdiction where such
-                sharing
-                requires your permission, we will only do so with your consent.</p>
 
             <div class="header-1">
                 <h4>Sharing with Partners</h4>
