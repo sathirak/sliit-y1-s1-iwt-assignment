@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include "../components/layout/html.php"; ?>
-    <title>AcademiX | All Courses</title>                 
+
+
+    <?php
+    include "../components/layout/html.php";
+    ?>
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/components.css">
     <link rel="stylesheet" href="../styles/all-courses.css">
@@ -25,6 +28,7 @@
         <div class="courses-list">
             <div class="course-item">
                 <div class="course-container">
+
                     <a class="btn btn-primary" href="../all-courses/create.php" role="button">New Course</a>
                     <br>
                     <div class="course-box">
@@ -75,7 +79,10 @@
                         </tbody>  
                         </div>
                 </div>
+
+                <img class="course-thumbnail" src="../assets/images/maths.jpg" alt="">
             </div>
+
         </div>
     </main>
 

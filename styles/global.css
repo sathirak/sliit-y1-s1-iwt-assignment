@@ -1,22 +1,30 @@
 :root {
   --app-bg: #ffffff;
   --app-white: white;
-  --app-primary: #fbbf24;
-  --app-secondary: #333;
-  --app-tertiary: #222;
-  --app-special: #ff6b6b;
-  --app-active: #ff3d3d;
+  --app-primary: #1e88e5;
+  --app-secondary: #2196f3;
+  --app-active: #cfd9e9;
+  --app-text: #222;
+  --app-mute: #cfd9e9;
+  --app-special: #e6f0ff;
   --font-size-large: 24px;
   --font-size-small: 14px;
+  --transition: all 300ms ease;
 }
 
 body {
-    margin: 0;
-    font-family: 'Nunito Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: var(--app-bg);
+  margin: 0;
+  font-family: 'Nunito Sans', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+  background-color: var(--app-bg);
 }
 
 main {
-    min-height: 80vh;
-    padding: 20px;
+  min-height: 80vh;
+  padding: 20px;
+}
+
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }

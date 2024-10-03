@@ -1,0 +1,43 @@
+.main-section {
+  background-color: var(--app-primary);
+  color: var(--app-white);
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.main-section h1 {
+  font-size: 32px;
+}
+
+.section {
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.section-content {
+  max-width: 1500px;
+  display: flex;
+  gap: 50px;
+}
+
+.section-p {
+  flex: 1;
+}
+
+.section-p h2 {
+  font-size: 24px;
+  color: var(--app-text);
+}
+
+.section-p p {
+  font-size: 18px;
+  color: var(--app-text);
+  line-height: 1.6;
+}
+
+.i img {
+  border-radius: 30px;
+}

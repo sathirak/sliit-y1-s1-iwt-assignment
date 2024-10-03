@@ -14,8 +14,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: var(--app-secondary);
+  background-color: var(--app-primary);
   color: var(--app-white);
+  margin: 0.75rem 1rem;
+  border-radius: 1rem;
 }
 
 .logo {
@@ -41,36 +43,54 @@
 
 .nav-links a {
   color: var(--app-white);
+  font-weight: bold;
   text-decoration: none;
 }
 
 .nav-links a:hover {
   text-decoration: underline;
   text-underline-offset: 2px;
-  color: var(--app-active);
+  color: var(--app-special);
 }
 
 /* Button Styles */
 
-.special-button {
-  background-color: var(--app-special);
+.button {
   border: none;
   padding: 10px 20px;
+  background-color: var(--app-primary);
   color: var(--app-white);
+  border-radius: 2rem;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 200ms ease-in;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.button:hover {
+  background-color: var(--app-white);
+  color: var(--app-primary);
+}
+
+.special-button {
+  background-color: var(--app-white);
+  border: none;
+  padding: 10px 20px;
+  color: var(--app-primary);
+  font-weight: bold;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: var(--transition);
 }
 
 .special-button:hover {
-  background-color: var(--app-active);
+  background-color: var(--app-special);
 }
 
 /* Footer Styles */
 
 .footer {
-  background-color: var(--app-secondary);
-  color: var(--app-white);
+  background-color: var(--app-special);
+  color: var(--app-text);
   padding: 40px 0 0 0;
   text-align: center;
 }
@@ -87,6 +107,7 @@
 .footer-logo h3 {
   font-size: 24px;
   margin: 0;
+  color: var(--app-primary);
 }
 
 .footer-links ul {
@@ -100,18 +121,18 @@
 }
 
 .footer-links ul li a {
-  color: var(--app-white);
+  color: var(--app-text);
   text-decoration: none;
   font-size: 16px;
   transition: color 0.3s ease;
 }
 
 .footer-links ul li a:hover {
-  color: var(--app-active);
+  text-decoration: underline;
 }
 
 .footer-social a {
-  color: var(--app-white);
+  color: var(--app-text);
   font-size: 20px;
   margin: 0 10px;
   display: inline-block;
@@ -124,7 +145,7 @@
 
 .footer-bottom {
   padding: 20px 0;
-  background-color: var(--app-tertiary);
+  background-color: var(--app-active);
   margin-top: 20px;
 }
 
@@ -132,3 +153,28 @@
   margin: 0;
   font-size: 14px;
 }
+
+/* Main Banner */
+
+.main-banner {
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.main-container {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-para {
+  color: var(--app-text);
+  width: 400px;
+  font-weight: bold;
+}
+
