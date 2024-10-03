@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--app-primary);
+}
+
+/*Left Side */
+.signup-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.imag,
+.content {
+    padding: 20px;
+}
+
+.imag {
+    text-align: right;
+    align-content: center;
+}
+
+.content {
+    align-content: stretch;
+    padding: 10px;
+    height: 100vh;
+}
+
+.start {
+    text-align: right;
+    padding: 50px;
+    align-items: center;
+}
+
+.image_1 img {
+    width: 500px;
+    height: 500px;
+    align-items: center;
+}
+
+/* Right Side */
+
+.up {
+    float: right;
+}
+
+.button {
+    border: none;
+    padding: 5px 10px;
+    background-color: var(--app-primary);
+    color: var(--app-white);
+    border-radius: 2rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.button:hover {
+    background-color: var(--app-white);
+    color: var(--app-primary);
+}
+
+.head {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.form-content {
+    padding-left: 10px;
+    padding-top: 50px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+}
+
+.form-signup {
+    padding-left: 100px;
+}
+
+.form {
+    padding: 20px;
+    width: 600px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.container-col {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.fname,
+.lname {
+    display: inline-block;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 5px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 20px;
+}
+
+input[type=password],
+input[type=email],
+.para-1 input[type=text] {
+    width: 80%;
+    padding: 15px;
+    margin: 5px 0 5px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 20px;
+}
+
+input[type=submit] {
+    width: 80%;
+}
+
+.dropdown {
+    position: relative;
+    width: max-content;
+    display: inline-block;
+}
+
+#dropbtn {
+    background-color: #95bdec;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    width: 300%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 20px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.check  {
+    text-align: justify;
+    width: 80%;
+}
+
+.button-signup {
+    border: none;
+    padding: 10px 20px;
+    background-color: var(--app-primary);
+    color: var(--app-white);
+    border-radius: 2rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.button:hover, .button-signup:hover{
+    background-color: var(--app-white);
+    color: var(--app-primary);
+}
