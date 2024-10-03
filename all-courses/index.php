@@ -54,11 +54,10 @@
                                                 <p class='card-text'><strong>Course ID:</strong> {$row['course_id']}</p>
                                                 <p class='card-text'><strong>Level:</strong> {$row['level']}</p>
                                                 <p class='card-text description'><strong>Description:</strong> {$row['description']}</p>
-                                                <p class='card-text'><strong>Rating:</strong> {$row['rating']} ⭐</p>
                                                 <p class='card-text'><strong>Published Date:</strong> {$row['published_date']}</p>
                                                 <p class='card-text'><strong>Price:</strong> \${$row['price']}</p>
                                                 <p class='card-text'><strong>Duration:</strong> {$row['duration']} Weeks</p>
-                                                <a class='btn btn-primary btn-sm' href='../all-courses/edit.php?id={$row['reviewer_id']}'>View</a>
+                                                <a class='btn btn-primary btn-sm' href='../all-courses/edit.php?id={$row['course_id']}'>View</a>
                                             </div>
                                         </div>
                                     </div>
