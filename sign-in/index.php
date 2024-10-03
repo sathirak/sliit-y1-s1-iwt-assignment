@@ -1,6 +1,7 @@
 <?
 session_start()
-    ?>
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +13,7 @@ session_start()
 
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/components.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/sign-in.css">
 
     <title>Sign In</title>
 </head>
@@ -31,11 +32,10 @@ session_start()
         <div class="content">
             <div class="up">
                 <p>Don't have an account?
-                    <!-- <input type="button" class="button" value="Sign Up"> -->
 
                     <button class="button" id="button">Sign In</button>
                     <script type="text/javascript">
-                        document.getElementById("button").onclick = function () {
+                        document.getElementById("button").onclick = function() {
                             location.href = "../sign-up/sign-up.php";
                         };
                     </script>
