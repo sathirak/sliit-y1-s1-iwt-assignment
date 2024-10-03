@@ -1,0 +1,111 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: var(--app-white);
+  color: var(--app-primary);
+  height: 175vh;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  color: var(--app-secondary);
+  text-decoration: none;
+}
+
+.user-list {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+}
+
+.user-box {
+  margin: 10px;
+  border-radius: 1rem;
+  border: 0;
+  width: 220%;
+  background-color: var(--app-special);
+}
+
+.user-item {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+}
+
+.user-container {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    gap: 40px;
+    height: 100%;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.view {
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  width: max-content;
+  background-color: var(--app-white);
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--app-primary);
+  border: none;
+  cursor: pointer;
+  transition: all 200ms ease;
+  display: flex;
+}
+
+.edit {
+  background-color:var(--app-primary);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+}
+
+.delete {
+  display: flex; 
+  background-color: var(--app-error);
+  color: var(--app-white);
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+
+
+
