@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #ffffff;
+    background-color: var(--app-white);
 }
 
 .container {
@@ -15,30 +15,30 @@ body {
 
 a:hover,a.active{
     background: none;
-    color: #0077ff;
+    color: var(--app-primary);
 }
 
-nav1 {
+.tabs {
     width: 200px;
-    background-color: #ffffff;
+    background-color: var(--app-white);
     padding: 20px;
 }
 
-nav1 ul {
+.tabs ul {
     list-style: none;
 }
 
-nav1 ul li {
+.tabs ul li {
     padding: 10px 0;
 }
 
-nav1 ul li a {
+.tabs ul li a {
     text-decoration: none;
     color: black;
     font-weight: bold;
 }
 
-main-section {
+section {
     flex: auto;
 }
 
@@ -49,9 +49,10 @@ h2 {
 }
 
 .ticket {
-    background-color: rgb(228, 241, 255);
+    background-color: var(--app-special);
     padding: 20px;
     margin-bottom: 20px;
+    border-radius: 1rem;
     display: flex;
     align-items: center;
 }
@@ -69,8 +70,8 @@ h2 {
 
 .view-details {
     padding: 10px 20px;
-    background-color: #fff;
-    border:1px solid #000;
+    background-color: var(--app-white);
+    border:0;
     border-radius: 5px;
     color: black;
     cursor: pointer;
@@ -78,13 +79,13 @@ h2 {
 
 .checked {
     padding: 10px 20px;
-    background-color: rgb(28, 100, 255);
-    color: white;
+    background-color: var(--app-primary);
+    color: var(--app-white);
     border-radius: 5px;
     border:none;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #79b8ff;
+    background-color: var(--app-active);
 }

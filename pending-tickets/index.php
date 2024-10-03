@@ -13,7 +13,7 @@ session_start();
     <title>About-Us</title>
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/components.css">
-    <link rel="stylesheet" href="pending-tickets.css">
+    <link rel="stylesheet" href="../styles/pending-tickets.css">
 
 </head>
 
@@ -24,60 +24,60 @@ session_start();
     ?>
 
     <main>
-    <div class="container">
-        <nav1>
-            <ul>
-                <li><a class="active" href="#">Pending Tickets</a></li>
-                <li><a href="#">Checked Tickets</a></li>
-            </ul>
-        </nav1>
+        <div class="container">
+            <nav class="tabs">
+                <ul>
+                    <li><a class="active" href="#">Pending Tickets</a></li>
+                    <li><a href="#">Checked Tickets</a></li>
+                </ul>
+            </nav>
 
-        <main-section>
-            <h2>New Support Tickets</h2>
-            <div class="ticket">
-                <p class="ticket-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor.</p>
-                <div class="ticket-actions">
-                    <button class="view-details">View Details</button>
-                    <button class="checked">Checked</button>
+            <section>
+                <h2>New Support Tickets</h2>
+                <div class="ticket">
+                    <p class="ticket-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor.</p>
+                    <div class="ticket-actions">
+                        <button class="view-details">View Details</button>
+                        <button class="checked">Checked</button>
+                    </div>
                 </div>
-            </div>
-            <div class="ticket">
-                <p class="ticket-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor.</p>
-                <div class="ticket-actions">
-                    <button class="view-details">View Details</button>
-                    <button class="checked">Checked</button>
+                <div class="ticket">
+                    <p class="ticket-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor.</p>
+                    <div class="ticket-actions">
+                        <button class="view-details">View Details</button>
+                        <button class="checked">Checked</button>
+                    </div>
                 </div>
-            </div>
-            <div class="ticket">
-                <p class="ticket-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor.</p>
-                <div class="ticket-actions">
-                    <button class="view-details">View Details</button>
-                    <button class="checked">Checked</button>
+                <div class="ticket">
+                    <p class="ticket-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor.</p>
+                    <div class="ticket-actions">
+                        <button class="view-details">View Details</button>
+                        <button class="checked">Checked</button>
+                    </div>
                 </div>
-            </div>
-            <div class="ticket">
-                <p class="ticket-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor.</p>
-                <div class="ticket-actions">
-                    <button class="view-details">View Details</button>
-                    <button class="checked">Checked</button>
+                <div class="ticket">
+                    <p class="ticket-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor.</p>
+                    <div class="ticket-actions">
+                        <button class="view-details">View Details</button>
+                        <button class="checked">Checked</button>
+                    </div>
                 </div>
-            </div>
-            <div class="ticket">
-                <p class="ticket-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor.</p>
-                <div class="ticket-actions">
-                    <button class="view-details">View Details</button>
-                    <button class="checked">Checked</button>
+                <div class="ticket">
+                    <p class="ticket-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor.</p>
+                    <div class="ticket-actions">
+                        <button class="view-details">View Details</button>
+                        <button class="checked">Checked</button>
+                    </div>
                 </div>
-            </div>
-            <div class="ticket">
-                <p class="ticket-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor.</p>
-                <div class="ticket-actions">
-                    <button class="view-details">View Details</button>
-                    <button class="checked">Checked</button>
+                <div class="ticket">
+                    <p class="ticket-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor.</p>
+                    <div class="ticket-actions">
+                        <button class="view-details">View Details</button>
+                        <button class="checked">Checked</button>
+                    </div>
                 </div>
-            </div>
-        </main-section>
-    </div>
+            </section>
+        </div>
 
     </main>
 
