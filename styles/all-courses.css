@@ -64,7 +64,7 @@
 .btn-sm {
   font-size: 0.9em;
   padding: 6px 10px;
-
+}
 
 .courses-list {
   display: flex;
@@ -125,4 +125,69 @@
 .go-to-course:hover {
   color: var(--app-white);
   background-color:var(--app-primary);
+}
+
+/* Card styles */
+.course-card {
+    border: 1px solid #dee2e6; /* Light border */
+    border-radius: 10px; /* Smooth rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+    background-color: #fff; /* Clean white background */
+    overflow: hidden;
+    margin: 20px 0; /* Add spacing around the card */
+}
+
+.course-card:hover {
+    transform: translateY(-5px); /* Lift card slightly on hover */
+}
+
+/* Card content spacing */
+.course-card .card-body {
+    padding: 20px;
+}
+
+.course-card .card-title {
+    font-size: 1.5rem;
+    color: #007bff; /* Accent color for title */
+    margin-bottom: 15px;
+}
+
+.course-card .card-text {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Description styles for better readability */
+.course-card .description {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    max-height: 60px;
+    overflow: hidden; /* Crop description for long text */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Button styles */
+.course-card .btn {
+    background-color: #007bff;
+    border: none;
+    border-radius: 50px; /* Rounded button */
+    padding: 5px 20px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.course-card .btn:hover {
+    background-color: #0056b3; /* Darker on hover */
+    color: #fff;
+}
+
+
+.course-container {
+  display: grid;
+  width: 90vw;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }

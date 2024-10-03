@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
+<head>
 
     <?php
     include "../components/layout/html.php";
+    include "../utils/db.php";
     ?>
+
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/components.css">
     <link rel="stylesheet" href="../styles/all-courses.css">
@@ -13,7 +15,17 @@
 </head>
 
 <body>
-    <?php include "../components/layout/header.php"; ?>
+    <?php
+
+    $sql = "SELECT * FROM course";
+    $result = $conn->query($sql);
+
+    if (!$result) {
+        die("Invalid query: " . $conn->error);
+    }
+
+    include "../components/layout/header.php";
+    ?>
 
     <main>
         <h1 class="heading">Browse All Our Courses</h1>
@@ -28,59 +40,39 @@
         <div class="courses-list">
             <div class="course-item">
                 <div class="course-container">
-
-                    <a class="btn btn-primary" href="../all-courses/create.php" role="button">New Course</a>
-                    <br>
                     <div class="course-box">
-                        <div class="head">
-                                <div>ID</div>
-                                <div>User ID</div>
-                                <div>Expertise</div>
-                                <div>Bio</div>
-                                <div>Rate</div>
-                                <div>Actions</div>
-                    </div>
-                        <tbody>
-                            <?php
-                            $servername = "127.0.0.1";
-                            $username = "root";
-                            $password = "";
-                            $database = "coursereviewer";
 
-                            $conn = new mysqli($servername, $username, $password, $database);
-
-                            if ($conn->connect_error) {
-                                die("Connection failed: " . $conn->connect_error);
-                            }
-
-                            $sql = "SELECT * FROM CourseReviewer"; 
-                            $result = $conn->query($sql);
-                            
-                            if (!$result) {
-                                die("Invalid query: " . $conn->error);                    
-                            }
-
-                            while ($row = $result->fetch_assoc()) {
-                                echo "
-                                 <div class='list'>
-                                    <div>{$row['reviewer_id']}</div>
-                                    <div>{$row['user_id']}</div>
-                                    <div>{$row['expertise']}</div>
-                                    <div>{$row['bio']}</div>
-                                    <div>{$row['rating']}</div>
-                                    <div>
-                                    <a class='btn btn-primary btn-sm' href='../all-courses/edit.php?id={$row['reviewer_id']}'> Edit</a>
-                                    <a class='btn btn-danger btn-sm' href='../all-courses/delete.php?id={$row['reviewer_id']}'> Delete</a>
+                        <?php
+                        echo "<div class='course-container'>";
+                        while ($row = $result->fetch_assoc()) {
+                            echo "
+                                <div class='card mb-3 course-card'>
+                                    <div class='row g-0'>
+                                        <div class='col-md-12'>
+                                            <div class='card-body'>
+                                                <h5 class='card-title'>{$row['course_name']}</h5>
+                                                <p class='card-text'><strong>Course ID:</strong> {$row['course_id']}</p>
+                                                <p class='card-text'><strong>Level:</strong> {$row['level']}</p>
+                                                <p class='card-text description'><strong>Description:</strong> {$row['description']}</p>
+                                                <p class='card-text'><strong>Rating:</strong> {$row['rating']} ⭐</p>
+                                                <p class='card-text'><strong>Published Date:</strong> {$row['published_date']}</p>
+                                                <p class='card-text'><strong>Price:</strong> \${$row['price']}</p>
+                                                <p class='card-text'><strong>Duration:</strong> {$row['duration']} Weeks</p>
+                                                <a class='btn btn-primary btn-sm' href='../all-courses/edit.php?id={$row['reviewer_id']}'>View</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                ";
-                            }
-                            ?>
-                        </tbody>  
-                        </div>
-                </div>
+                            ";
 
-                <img class="course-thumbnail" src="../assets/images/maths.jpg" alt="">
+                        
+                        }
+
+                        echo "</div>";
+                        ?>
+
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -88,4 +80,5 @@
 
     <?php include "../components/layout/footer.php"; ?>
 </body>
+
 </html>
