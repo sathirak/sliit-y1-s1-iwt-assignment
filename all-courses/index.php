@@ -1,58 +1,83 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
+
 
     <?php
     include "../components/layout/html.php";
     ?>
-    <title>AcademiX | All Courses</title>
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/components.css">
     <link rel="stylesheet" href="../styles/all-courses.css">
     <link rel="stylesheet" href="../styles/components/search-bar.css">
-
 </head>
 
 <body>
-
-
-    <?php
-    include "../components/layout/header.php";
-    ?>
-
+    <?php include "../components/layout/header.php"; ?>
 
     <main>
-        <h1 class="heading">
-            Browse all of our courses
-        </h1>
+        <h1 class="heading">Browse All Our Courses</h1>
 
         <div class="search-bar search-bar-margin">
-            <input type="text" placeholder="Search Courses...">
-            <button id="search-button">Search</button>
+            <form action="" method="GET">
+                <input type="text" name="search" placeholder="Search Courses...">
+                <button id="search-button">Search</button>
+            </form>
         </div>
 
         <div class="courses-list">
             <div class="course-item">
                 <div class="course-container">
-                    <div>
-                        <p class="course-title">Physics with Samitha Rathnayake</p>
-                        <p class="course-subject">Subject Name</p>
+
+                    <a class="btn btn-primary" href="../all-courses/create.php" role="button">New Course</a>
+                    <br>
+                    <div class="course-box">
+                        <div class="head">
+                                <div>ID</div>
+                                <div>User ID</div>
+                                <div>Expertise</div>
+                                <div>Bio</div>
+                                <div>Rate</div>
+                                <div>Actions</div>
                     </div>
+                        <tbody>
+                            <?php
+                            $servername = "127.0.0.1";
+                            $username = "root";
+                            $password = "";
+                            $database = "coursereviewer";
 
-                    <button class="go-to-course">Go to Course</button>
-                </div>
+                            $conn = new mysqli($servername, $username, $password, $database);
 
-                <img class="course-thumbnail" src="../assets/images/physics.jpg" alt="">
-            </div>
+                            if ($conn->connect_error) {
+                                die("Connection failed: " . $conn->connect_error);
+                            }
 
-            <div class="course-item">
-                <div class="course-container">
-                    <div>
-                        <p class="course-title">Introductory Mathematics for A/Ls</p>
-                        <p class="course-subject">Mathematics</p>
-                    </div>
+                            $sql = "SELECT * FROM CourseReviewer"; 
+                            $result = $conn->query($sql);
+                            
+                            if (!$result) {
+                                die("Invalid query: " . $conn->error);                    
+                            }
 
-                    <button class="go-to-course">Go to Course</button>
+                            while ($row = $result->fetch_assoc()) {
+                                echo "
+                                 <div class='list'>
+                                    <div>{$row['reviewer_id']}</div>
+                                    <div>{$row['user_id']}</div>
+                                    <div>{$row['expertise']}</div>
+                                    <div>{$row['bio']}</div>
+                                    <div>{$row['rating']}</div>
+                                    <div>
+                                    <a class='btn btn-primary btn-sm' href='../all-courses/edit.php?id={$row['reviewer_id']}'> Edit</a>
+                                    <a class='btn btn-danger btn-sm' href='../all-courses/delete.php?id={$row['reviewer_id']}'> Delete</a>
+                                    </div>
+                                </div>
+                                ";
+                            }
+                            ?>
+                        </tbody>  
+                        </div>
                 </div>
 
                 <img class="course-thumbnail" src="../assets/images/maths.jpg" alt="">
@@ -61,10 +86,6 @@
         </div>
     </main>
 
-    <?php
-    include "../components/layout/footer.php";
-    ?>
-
+    <?php include "../components/layout/footer.php"; ?>
 </body>
-
 </html>
