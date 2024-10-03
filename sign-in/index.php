@@ -53,7 +53,7 @@ session_start()
                 </div>
 
                 <div class="form-signup">
-                    <form action="" class="form" method="POST" autocomplete="on">
+                    <form action="sign-in.inc.php" class="form" method="POST" autocomplete="on">
 
                         <div class="para">
                             <label for="email">Email Address</label><br>
@@ -79,7 +79,7 @@ session_start()
 
                         <br>
                         <div class="signup">
-                            <input type="submit" class="button-signin" onclick="alert('Hii')" value="Sign In">
+                            <input type="submit" class="button-signin" onclick="alert('Hii')" name="submit" value="Sign In">
                         </div>
 
                     </form>

@@ -51,7 +51,7 @@ session_start()
                 </div>
 
                 <div class="form-signup">
-                    <form action="" class="form" method="POST" autocomplete="on">
+                    <form action="sign-up.inc.php" class="form" method="POST" autocomplete="on">
                   
                             <div class="fname container-col">
                                 <label for="firstname">First Name</label>
@@ -74,7 +74,7 @@ session_start()
 
 
                         <div class="dropdown">
-                            <button id="dropbtn" class="dropbtn">Teacher At</button>
+                            <button id="dropbtn" class="dropbtn" name="dropbtn" >Teacher At</button>
                             <div class="dropdown-content container-col">
                                 <a href="#">Private School</a>
                                 <a href="#">Government School</a>
@@ -103,7 +103,7 @@ session_start()
                                 Settings.</label>
                         </div>
 
-                        <button type="submit" class="button-signup" onclick="alert('Hii')">Sign Up</button>
+                        <button type="submit" name="submit" class="button-signup" >Sign Up</button>
                     </form>
                 </div>
             </div>
@@ -113,3 +113,5 @@ session_start()
 </body>
 
 </html>
+
+<!-- onclick="alert('Hii')" -->
