@@ -4,18 +4,18 @@ body {
     background-color: #f4f4f4;
 }
 
-header { 
+.hero { 
     padding: 2rem;
     text-align: center;
     font-size: 30px;
 }
 
-header h1 {
+.hero h1 {
     margin: 0;
     font-size: 2.5rem;
 }
 
-header p {
+.hero p {
     font-size: 1.2rem;
     margin-top: 0.5rem;
 }
