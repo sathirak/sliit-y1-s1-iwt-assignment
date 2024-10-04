@@ -77,7 +77,7 @@ $user = $result->fetch_assoc();
                     </div>
 
                     <div class="cards">
-                        <div class="card shadow">
+                        <div class="card shadow" id="cd-1" >
                             <div class="box-1">
                                 <h2>My Courses</h2>
                                 <h3>Course To Do</h3>
@@ -87,7 +87,7 @@ $user = $result->fetch_assoc();
                             </div>
                         </div>
 
-                        <div class="card shadow">
+                        <div class="card shadow" id="cd-2" >
                             <div class="box-1">
                                 <h2>Completed</h2>
                                 <h3>Learned Courses</h3>
@@ -97,7 +97,7 @@ $user = $result->fetch_assoc();
                             </div>
                         </div>
 
-                        <div class="card shadow">
+                        <div class="card shadow" id="cd-3" >
                             <div class="box-1">
                                 <h2>My Status</h2>
                                 <h3>Progress</h3>
@@ -107,7 +107,7 @@ $user = $result->fetch_assoc();
                             </div>
                         </div>
 
-                        <div class="card shadow">
+                        <div class="card shadow" id="cd-4" >
                             <div class="box-1">
                                 <h2>Watch Time</h2>
                                 <h3>Total minutes</h3>
