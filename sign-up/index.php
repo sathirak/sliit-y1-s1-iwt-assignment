@@ -98,7 +98,7 @@ session_start()
 
                         <div class="conf-pw container-col">
                             <label for="conf-pw">Confirm Password</label>
-                            <input type="password" id="password" name="password" placeholder="Confirm entered password "
+                            <input type="password" id="password" name="c_password" placeholder="Confirm entered password "
                                 required>
                         </div>
 

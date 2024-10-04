@@ -1,27 +1,28 @@
 <?php
 
-
+include '../utils/config-user.php';
 
 if (isset($_POST["submit"])) {
     $fname = $_POST["f_name"];
     $lname = $_POST["l_name"];
-    $e_email = $_POST["email"];
-    $drop_btn = $_POST["dropbtn"];
-    $p_password = $_POST["password"];
+    $email = $_POST["email"];
+    $contact = $_POST["contact"];
+    $role = $_POST["role"];
+    $password = $_POST["password"];
+    $c_password = $_POST["c_password"];
 
-    require 'su-config.php';
 
-    $lname = $_POST["l_name"];
-    $sql = "INSERT INTO users VALUES('$fname', '$lname', '$e_email', '$drop_btn', '$p_password')";
+    $sql = "INSERT INTO user VALUES('$fname', '$lname', '$email', '$contact', '$role', '$password', ''$$c_password)";
 
-    if ($con->query($sql)) {
+    if ($conn->query($sql) === TRUE) {
         echo "Insert successful";
     } else {
-        echo "Error" . $con->error;
+        echo "Error" . $conn->error;
     }
 
 } else {
     header('Location:index.php');
-}
 
-// $con->close();
+
+    $con->close();
+}
