@@ -1,0 +1,22 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.content {
+    margin: 50px;
+}
+
+.header-0 {
+    font-weight: bold;
+}
+
+.list ul li {
+    margin-left: 70px;
+}
+
+.content{
+    text-align: justify;
+}
