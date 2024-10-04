@@ -1,108 +1,91 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
 
     <?php
     include "../components/layout/html.php";
+    include "../utils/db.php";
     ?>
-    <title>AcademiX | All Courses</title>
+
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/components.css">
-    <link rel="stylesheet" href="../styles/approved-course.css">
-
-
+    <link rel="stylesheet" href="../styles/approved-courses.css">
+    <link rel="stylesheet" href="../styles/components/search-bar.css">
 </head>
 
 <body>
-
-
     <?php
+
+    $sql = "SELECT * FROM course WHERE status='Approve'";
+    $result = $conn->query($sql);
+
+    if (!$result) {
+        die("Invalid query: " . $conn->error);
+    }
+
     include "../components/layout/header.php";
     ?>
-    
 
-<body>
     <div class="container">
         <nav class="sidebar">
             <ul>
-                <li><a href="index.php">Review</a></li>
+                <li><a href="#">Review</a></li>
                 <li><a href="#">Watch Courses</a></li>
-                <li><a href="index.php">Approved Courses</a></li>
+                <li><a href="#">Approved Courses</a></li>
             </ul>
         </nav>
 
-        <main>
-        </h1>
+    <main>
+        <h1 class="heading">Approved Courses</h1>
+
+        <div class="search-bar search-bar-margin">
+            <form action="" method="GET">
+                <input type="text" name="search" placeholder="Search Courses...">
+                <button id="search-button">Search</button>
+            </form>
+        </div>
+
         <div class="courses-list">
-            <div class="course-box">
             <div class="course-item">
                 <div class="course-container">
-                    <div>
-                        <p class="course-title">Physics with Samitha Rathnayake</p>
-                        <p class="course-subject">Physics</p>
+                    <div class="course-box">
+
+                        <?php
+                        echo "<div class='course-container'>";
+                        while ($row = $result->fetch_assoc()) {
+                            echo "
+                                <div class='card mb-3 course-card'>
+                                    <div class='row g-0'>
+                                        <div class='col-md-12'>
+                                            <div class='card-body'>
+                                                <h5 class='card-title'>{$row['course_name']}</h5>
+                                                <p class='card-text'><strong>Course ID:</strong> {$row['course_id']}</p>
+                                                <p class='card-text'><strong>Level:</strong> {$row['level']}</p>
+                                                <p class='card-text description'><strong>Description:</strong> {$row['description']}</p>
+                                                <p class='card-text'><strong>Published Date:</strong> {$row['published_date']}</p>
+                                                <p class='card-text'><strong>Price:</strong> \${$row['price']}</p>
+                                                <p class='card-text'><strong>Duration:</strong> {$row['duration']} Weeks</p>
+                                                <a class='btn btn-primary btn-sm' href='../all-courses/edit.php?id={$row['course_id']}'>View</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ";       
+                        }
+                        echo "</div>";
+                        ?>
+
                     </div>
-
-                    <button class="view-details">View Details</button>
                 </div>
-
-                <img class="course-thumbnail" src="../assets/images/physics.jpg" alt="">
-            </div>
-            </div>
-
-            <div class="course-box">
-            <div class="course-item">
-                <div class="course-container">
-                    <div>
-                        <p class="course-title">Introductory Mathematics for A/Ls</p>
-                        <p class="course-subject">Mathematics</p>
-                    </div>
-
-                    <button class="view-details">View Details</button>               
-                </div>
-
-                <img class="course-thumbnail" src="../assets/images/maths.jpg" alt="">
-            </div>
-            </div>
-
-            <div class="course-box">
-            <div class="course-item">
-                <div class="course-container">
-                    <div>
-                        <p class="course-title">Economics for A/Ls</p>
-                        <p class="course-subject">Economics</p>
-                    </div>
-
-                    <button class="view-details">View Details</button>  
-                </div>
-
-                <img class="course-thumbnail" src="../assets/images/econ.jpeg" alt="">
-            </div>
-            </div>
-
-            <div class="course-box">
-            <div class="course-item">
-                <div class="course-container">
-                    <div>
-                        <p class="course-title">Chemistry fot A/Ls</p>
-                        <p class="course-subject">Chemistry</p>
-                    </div>
-
-                    <button class="view-details">View Details</button>  
-                </div>
-
-                <img class="course-thumbnail" src="../assets/images/chem.jpeg" alt="">
-            </div>
             </div>
 
         </div>
     </main>
 
-    </div>
+    <?php include "../components/layout/footer.php"; ?>
 
-    <?php
-    include "../components/layout/footer.php";
-    ?>
+    <script src="../scripts/approved.js"></script>
 
 </body>
-
 </html>
