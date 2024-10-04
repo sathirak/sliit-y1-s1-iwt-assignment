@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $contact = $_POST["contact"];
     $dob = $_POST["dob"];
     $h_qualification = $_POST["role"];
-    $password = $_POST["password"];
+    $u_password = $_POST["password"];
 
     $dobDate = new DateTime($dob);
     $today = new DateTime('today');
@@ -16,8 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     include '../utils/db.php';
 
-    $sql = "INSERT INTO users (first_name, last_name, contact_no, highest_qualification, password, email, age) VALUES
-('$fname', '$lname', '$contact', '$h_qualification', '$password', '$email', '$age');";
+    $sql = "INSERT INTO users (first_name, last_name, contact_no, date_of_birth, highest_qualification, password, email, age) VALUES ('$fname', '$lname', '$contact', '$dob', '$h_qualification', '$u_password', '$email', '$age');";
 
     $result = $conn->query($sql);
 

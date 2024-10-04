@@ -58,12 +58,12 @@ session_start()
 
                         <div class="para">
                             <label for="email">Email Address</label><br>
-                            <input type="email" id="email" name="email" placeholder="Enter email address" required>
+                            <input type="email" name="email" placeholder="Enter email address" required>
                         </div>
 
                         <div class="pw">
                             <label for="password">Password</label><br>
-                            <input type="password" id="password" name="password" placeholder="Enter 8 characters "
+                            <input type="password" name="password" placeholder="Enter 8 characters "
                                 required>
                         </div>
                         <br>
@@ -79,8 +79,8 @@ session_start()
                         </div>
 
                         <br>
-                        <div class="signin">
-                        <input type="submit" name="submit" value="Sign In" class="button-signin"></input>
+                        <div class="signup">
+                            <button type="submit" class="button-signin" name="submit">Sign In</button>
                         </div>
 
                     </form>

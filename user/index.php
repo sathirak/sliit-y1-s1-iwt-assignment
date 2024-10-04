@@ -1,5 +1,18 @@
 <?php
 session_start();
+include "../utils/db.php";
+
+$user_id = $_SESSION['user_id'];
+
+if (!isset($user_id)) {
+    header("Location: ../sign-in");
+    exit();
+}
+
+$sql = "SELECT * FROM users WHERE user_id = '$user_id'";
+$result = $conn->query($sql);
+$user = $result->fetch_assoc();
+
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +73,7 @@ session_start();
                 <h1>Upcoming Courses</h1>
                 <div class="upcome">
                     <div class="welcome">
-                        <h4>Welcome back, Thilu</h4>
+                        <h4>Welcome back, <?= $user['first_name'] ?></h4>
                     </div>
 
                     <div class="cards">
