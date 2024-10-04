@@ -13,6 +13,34 @@ $sql = "SELECT * FROM users WHERE user_id = '$user_id'";
 $result = $conn->query($sql);
 $user = $result->fetch_assoc();
 
+
+// -----------//-------------
+
+
+// include "../utils/config.php";
+
+// $user_id = $_SESSION['user_id'];
+
+// if (!isset($user_id)) {
+//     header("Location: ../sign-in");
+//     exit();
+// }
+
+
+// $sql = "SELECT c.course_id, c.course_name, c.description, c.duration, uec.started_at FROM course.c, user_enrolls_course.uec WHERE c.course_id = uec.course_id AND uec.user_id = $user_id";
+// $result = $conn->query($sql);
+
+// if ($result->num_rows > 0) {
+//     while ($row = $result->fetch_assoc()) {
+//         echo "<tr>";
+//         echo "<td>" . $row['course_name'] . "</td>";
+//         echo "<td>" . $row['started_at'] . "</td>";
+//         echo "<td>" . $row['completed_at'] . "</td>";
+//         echo "<td>";
+//     }
+// }else{
+//     echo "<tr><td colspan='4'>No enrolled courses found.</td></tr>";
+// }
 ?>
 
 
@@ -41,13 +69,13 @@ $user = $result->fetch_assoc();
                 <img src="../assets/images/logo.png" alt="logo">
             </div>
         </a>
-            
+
 
         <div>
             <ul class="sidebar-container">
                 <li>Dashboard</li>
                 <li>My Courses</li>
-                <li>Explore Courses</li>
+                <li>Privacy Policy</li>
                 <li>Contact Us</li>
                 <li>About Us</li>
                 <li>My Account</li>
@@ -56,21 +84,17 @@ $user = $result->fetch_assoc();
     </div>
 
     <div class="container">
-
-        <!-- header -->
         <header class="header-user">
-
-
             <div class="search-bar">
                 <input type="text" placeholder="Search Courses...">
                 <button id="search-button">Search</button>
             </div>
 
             <div class="user">
-                <a href="#" class="special-button">Profile</a>
+                <a href="#" class="special-button">
+                    <img src="../assets/images/user-img.png" alt="">
+                </a>
             </div>
-
-
         </header>
 
         <div class="content">
@@ -80,14 +104,16 @@ $user = $result->fetch_assoc();
                 <div class="upcome">
                     <div class="welcome">
                         <h4>Welcome back, <?= $user['first_name'] ?></h4>
+                        <header class="dashboard-header">
+                            <button class="add-course-btn">Add New Course</button>
+                        </header>
                     </div>
 
                     <div class="cards">
-                        <!-- <a href=""> -->
                         <div class="card shadow" id="cd-1">
                             <div class="box-1">
                                 <h2>My Courses</h2>
-                                <h3>Purchased Courses</h3>
+                                <h3>Enrolled Courses</h3>
                             </div>
                             <div class="icon-case">
                                 <img src="../assets/icons/course.png" alt="courses">
@@ -176,7 +202,9 @@ $user = $result->fetch_assoc();
                     ?>
                 </div>
             </div>
-            <script src="../scripts/user.js"></script>
+        </div>
+        <script src="../scripts/user.js"></script>
+    </div>
 </body>
 
 </html>

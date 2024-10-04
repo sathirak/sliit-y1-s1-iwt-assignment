@@ -12,7 +12,7 @@ session_start();
 
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/components.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles/privacy.css">
 
     <title>Privacy Policy</title>
 </head>

@@ -30,7 +30,7 @@ document.querySelectorAll(".sidebar-container li").forEach(function (menuItem, i
                 break;
             case 2:
                 // Navigate to Explore Courses 
-                document.getElementById("search-button").scrollIntoView({ behavior: "smooth" });
+                window.location.href = "../privacy-policy/index.php";
                 break;
             case 3:
                 // Navigate to Contact Us
