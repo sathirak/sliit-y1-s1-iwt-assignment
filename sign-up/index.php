@@ -1,6 +1,6 @@
 <?
 session_start()
-    ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +33,7 @@ session_start()
                 <p>Already a member?
                     <button class="button" id="button">Sign In</button>
                     <script type="text/javascript">
-                        document.getElementById("button").onclick = function () {
+                        document.getElementById("button").onclick = function() {
                             location.href = "../sign-in";
                         };
                     </script>
@@ -51,7 +51,7 @@ session_start()
                 </div>
 
                 <div class="form-signup">
-                    <form action="sign-up.inc.php" class="form" method="POST" autocomplete="on">
+                    <form action="sign-up.php" class="form" method="POST" autocomplete="on">
 
                         <div class="fname container-col">
                             <label for="firstname">First Name</label>
@@ -76,18 +76,17 @@ session_start()
                         <div class="dropdown">
                             <label for="role">Teacher at</label><br>
                             <select id="role" name="role" required>
-                            <option value="">Teacher at</option>
-                                <option class="dropdown-content value="Private School">Private School</option>
-                                <option class="dropdown-content value="Government School">Government School</option>
-                                <option class="dropdown-content value="Tution Sector">Tution Sector</option>
-                            </select><br>
+                                <option value="">Teacher at</option>
+                                <option class="dropdown-content" value="Private School">Private School</option>
+                                <option class="dropdown-content" value="Government School">Government School</option>
+                                <option class="dropdown-content" value="Tution Sector">Tution Sector</option>
+                            </select>
+                        </div>
 
-                            <!-- <button id="dropbtn" class="dropbtn" name="dropbtn" >Teacher At</button>
-                            <div class="dropdown-content container-col">
-                                <a href="#">Private School</a>
-                                <a href="#">Government School</a>
-                                <a href="#">Tution Sector</a>
-                            </div> -->
+
+                        <div class="para-1 container-col">
+                            <label for="contact">Birth Date</label>
+                            <input type="date" id="dob" name="dob" placeholder="Enter birth date" required>
                         </div>
 
                         <div class="pw container-col">
@@ -98,20 +97,19 @@ session_start()
 
                         <div class="conf-pw container-col">
                             <label for="conf-pw">Confirm Password</label>
-                            <input type="password" id="password" name="c_password" placeholder="Confirm entered password "
+                            <input type="password" id="c_password" name="c_password" placeholder="Confirm entered password "
                                 required>
                         </div>
 
 
                         <div class="check">
-
                             <label for="check container-col">
                                 <input type="checkbox" id="check" name="check" required> Creating an account means you
                                 are aggree with our Terms of Service, Privacy Policy, and Our Default Notification
                                 Settings.</label>
                         </div>
 
-                        <button type="submit" name="submit" class="button-signup">Sign Up</button>
+                        <input type="submit" name="submit" class="button-signup">Sign Up</input>
                     </form>
                 </div>
             </div>

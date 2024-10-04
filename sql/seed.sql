@@ -37,3 +37,16 @@ VALUES
 ( 'Mobile App Development', 'Advanced', 'https://example.com/mobile-dev.jpg', 'Create mobile apps for iOS and Android', '2024-05-01', 89.99, 60, 106),
 ( 'Cloud Computing Basics', 'Beginner', 'https://example.com/cloud-basics.jpg', 'Introduction to cloud computing concepts', '2024-05-15', 44.99, 25, 107),
 ( 'Artificial Intelligence Ethics', 'Advanced', 'https://example.com/ai-ethics.jpg', 'Explore ethical considerations in AI', '2024-06-01', 64.99, 30, 108);
+
+INSERT INTO users (first_name, last_name, contact_no, date_of_birth, highest_qualification, password, email, age)
+VALUES 
+( 'John', 'Doe', '1234567890', '1990-05-14', 'Bachelors in Computer Science', 'password123', 'john.doe@example.com', 34),
+( 'Jane', 'Smith', '9876543210', '1992-08-22', 'Masters in Physics', 'securePass456', 'jane.smith@example.com', 32),
+( 'Michael', 'Johnson', '5556667777', '1988-11-30', 'PhD in Chemistry', 'password789', 'michael.johnson@example.com', 36),
+( 'Emily', 'Davis', '2223334444', '1995-01-15', 'Bachelors in Biology', 'myPass321', 'emily.davis@example.com', 29),
+( 'Daniel', 'Miller', '1112223333', '1991-06-10', 'Masters in Mathematics', 'danielPass', 'daniel.miller@example.com', 33),
+( 'Olivia', 'Garcia', '7778889999', '1993-03-27', 'Bachelors in Economics', 'oliviaStrong', 'olivia.garcia@example.com', 31),
+( 'William', 'Martinez', '9998887777', '1989-12-05', 'Masters in History', 'martinez789', 'william.martinez@example.com', 35),
+( 'Sophia', 'Robinson', '4445556666', '1994-09-17', 'PhD in Literature', 'sophia789', 'sophia.robinson@example.com', 30),
+( 'David', 'Clark', '1231231234', '1990-04-11', 'Bachelors in Psychology', 'clarkStrong123', 'david.clark@example.com', 34),
+('Lily', 'Walker', '3213214321', '1996-02-02', 'Masters in Sociology', 'walkerSecure', 'lily.walker@example.com', 28);
