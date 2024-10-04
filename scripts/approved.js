@@ -1,15 +1,16 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const courseCards = document.querySelectorAll('.course-card');
+document.addEventListener('DOMContentLoaded', function () { 
+    const courseLevels = document.querySelectorAll('.course-level');
 
-    courseCards.forEach(function (card) {
-        const level = card.querySelector('.card-text strong:contains("Level")').nextSibling.textContent.trim();
+    courseLevels.forEach(function (levelElement) {
+        const levelText = levelElement.textContent.trim();
 
-        if (level === 'Beginner') {
-            card.style.backgroundColor = 'yellow';
-        } else if (level === 'Intermediate') {
-            card.style.backgroundColor = 'red';
-        } else if (level === 'Advanced') {
-            card.style.backgroundColor = 'purple';
+
+        if (levelText === 'Beginner') {
+            levelElement.style.backgroundColor = 'yellow';
+        } else if (levelText === 'Intermediate') {
+            levelElement.style.backgroundColor = 'red'
+        } else if (levelText === 'Advanced') {
+            levelElement.style.backgroundColor = 'purple';;
         }
     });
 });
