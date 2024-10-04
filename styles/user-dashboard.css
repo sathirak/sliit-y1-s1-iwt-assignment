@@ -149,6 +149,11 @@ h3 {
   text-align: left;
 }
 
+.upcome:hover{
+  background-color: #413b3a;
+  color: var(--app-white);
+}
+
 .upcome {
   padding: 0;
   display: flex;

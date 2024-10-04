@@ -32,6 +32,8 @@ $user = $result->fetch_assoc();
 </head>
 
 <body>
+
+
     <div class="side-bar">
         <div class="name">
             <h1>AcademiX</h1>
@@ -70,24 +72,25 @@ $user = $result->fetch_assoc();
         <div class="content">
 
             <div class="content-2">
-                <h1>Upcoming Courses</h1>
+                <h1>User Dashboard</h1>
                 <div class="upcome">
                     <div class="welcome">
                         <h4>Welcome back, <?= $user['first_name'] ?></h4>
                     </div>
 
                     <div class="cards">
-                        <div class="card shadow" id="cd-1" >
-                            <div class="box-1">
-                                <h2>My Courses</h2>
-                                <h3>Course To Do</h3>
+                        <!-- <a href=""> -->
+                            <div class="card shadow" id="cd-1">
+                                <div class="box-1">
+                                    <h2>My Courses</h2>
+                                    <h3>Purchased Courses</h3>
+                                </div>
+                                <div class="icon-case">
+                                    <img src="../assets/icons/course.png" alt="courses">
+                                </div>
                             </div>
-                            <div class="icon-case">
-                                <img src="../assets/icons/course.png" alt="courses">
-                            </div>
-                        </div>
-
-                        <div class="card shadow" id="cd-2" >
+                        </a>
+                        <div class="card shadow" id="cd-2">
                             <div class="box-1">
                                 <h2>Completed</h2>
                                 <h3>Learned Courses</h3>
@@ -97,7 +100,17 @@ $user = $result->fetch_assoc();
                             </div>
                         </div>
 
-                        <div class="card shadow" id="cd-3" >
+                        <div class="card shadow" id="cd-3">
+                            <div class="box-1">
+                                <h2>Learning course</h2>
+                                <h3>Course To Do</h3>
+                            </div>
+                            <div class="icon-case">
+                                <img src="../assets/icons/watch-time.webp" alt="watch-time">
+                            </div>
+                        </div>
+
+                        <div class="card shadow" id="cd-4">
                             <div class="box-1">
                                 <h2>My Status</h2>
                                 <h3>Progress</h3>
@@ -106,19 +119,11 @@ $user = $result->fetch_assoc();
                                 <img src="../assets/icons/graph.png" alt="graph">
                             </div>
                         </div>
-
-                        <div class="card shadow" id="cd-4" >
-                            <div class="box-1">
-                                <h2>Watch Time</h2>
-                                <h3>Total minutes</h3>
-                            </div>
-                            <div class="icon-case">
-                                <img src="../assets/icons/watch-time.webp" alt="watch-time">
-                            </div>
-                        </div>
                     </div> <br><br>
+
+
                     <div class="content-2">
-                        <h1>My Courses</h1>
+                        <h1 id="my-courses" >My Courses</h1>
                         <div class="upcome">
                             <div class="new-event">
                                 <h4>Course - 01</h4>
@@ -132,6 +137,39 @@ $user = $result->fetch_assoc();
 
                         </div>
                     </div>
+
+                    <div class="content-2">
+                        <h1 id="completed-courses" >Completed Courses</h1>
+                        <div class="upcome">
+                            <div class="new-event">
+                                <h4>Course - 01</h4>
+                            </div>
+                            <div class="new-event">
+                                <h4>Course - 02</h4>
+                            </div>
+                            <div class="new-event">
+                                <h4>Course - 03</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-2">
+                        <h1 id="learning-course" >Learning course</h1>
+                        <div class="upcome">
+                            <div class="new-event">
+                                <h4>Course - 01</h4>
+                            </div>
+                            <div class="new-event">
+                                <h4>Course - 02</h4>
+                            </div>
+                            <div class="new-event">
+                                <h4>Course - 03</h4>
+                            </div>
+
+                        </div>
+                    </div>
+
+
                 </div>
 
                 <div class="footer">
@@ -140,6 +178,7 @@ $user = $result->fetch_assoc();
                     ?>
                 </div>
             </div>
+            <script src="../scripts/user.js" ></script>
 </body>
 
 </html>
