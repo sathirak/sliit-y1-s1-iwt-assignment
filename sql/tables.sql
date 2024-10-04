@@ -44,5 +44,14 @@ CREATE TABLE users (
     password VARCHAR(255),
     email VARCHAR(100),
     age INT,
-    CONSTRAINT pk_user PRIMARY KEY (user_id)
+    CONSTRAINT pk_users PRIMARY KEY (user_id)
+);
+
+CREATE TABLE user_enrolls_course(
+number INT AUTO_INCREMENT,
+user_id INT,
+course_id INT,
+completed_at DATE,
+started_at DATE,
+CONSTRAINT pk_user_enrolls_course PRIMARY KEY(number)
 );

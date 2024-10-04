@@ -25,21 +25,24 @@ h3 {
 /*side navigation bar*/
 .side-bar {
   position: fixed;
-  width: 20%;
+  width: 15%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-.name {
-  height: 10vh;
-  display: flex;
+.logo {
+  text-align: center;
   align-items: center;
-  justify-content: center;
 }
-.sidebar-container {
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+/* .sidebar-container {
   width: 100%;
-}
+} */
 
 .side-bar li {
   font-size: 16px;
@@ -149,9 +152,8 @@ h3 {
   text-align: left;
 }
 
-.upcome:hover{
-  background-color: #413b3a;
-  color: var(--app-white);
+.card:hover, .welcome:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6)
 }
 
 .upcome {
@@ -177,7 +179,7 @@ h3 {
 
 .welcome {
   width: 100%;
-  height: 200px;
+  height: 100px;
   background-color: var(--app-primary);
   color: var(--app-white);
   border-radius: 1.5rem;
@@ -186,4 +188,7 @@ h3 {
   align-items: center;
   justify-content: space-around;
   font-size: 25px;
+}
+.welcome:hover {
+  box-shadow: 0 8px 16px 0 rgba(95, 96, 96, 0.2)
 }

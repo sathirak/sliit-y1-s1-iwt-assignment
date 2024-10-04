@@ -122,11 +122,9 @@ input[type=email] {
     padding-right: 120px;
 }
 
-input[type=submit] {
-    width: 80%;
-}
 
 .button-signin {
+    width: 80%;
     border: none;
     padding: 10px 20px;
     background-color: var(--app-primary);

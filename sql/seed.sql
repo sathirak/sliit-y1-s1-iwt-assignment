@@ -50,3 +50,16 @@ VALUES
 ( 'Sophia', 'Robinson', '4445556666', '1994-09-17', 'PhD in Literature', 'sophia789', 'sophia.robinson@example.com', 30),
 ( 'David', 'Clark', '1231231234', '1990-04-11', 'Bachelors in Psychology', 'clarkStrong123', 'david.clark@example.com', 34),
 ('Lily', 'Walker', '3213214321', '1996-02-02', 'Masters in Sociology', 'walkerSecure', 'lily.walker@example.com', 28);
+
+INSERT INTO user_enrolls_course(user_id, course_id, completed_at, started_at)
+VALUES
+(23, 14, '2024-05-01', '2024-01-01'),
+(45, 28, '2024-04-10', '2024-01-10'),
+(67, 18, '2024-08-01', '2024-03-01'),
+(32, 8,  '2024-02-15', '2024-01-05'),
+(10, 37, '2024-06-05', '2024-02-05'),
+(9,  12, '2024-03-01', '2024-01-01'),
+(54, 44, '2024-07-01', '2024-03-01'),
+(87, 16, '2024-06-25', '2024-02-25'),
+(38, 21, '2024-05-05', '2024-01-15'),
+(75, 5,  '2024-06-30', '2024-03-01');

@@ -15,6 +15,7 @@ $user = $result->fetch_assoc();
 
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,9 +36,12 @@ $user = $result->fetch_assoc();
 
 
     <div class="side-bar">
-        <div class="name">
-            <h1>AcademiX</h1>
-        </div>
+        <a href="../index.php">
+            <div class="logo">
+                <img src="../assets/images/logo.png" alt="logo">
+            </div>
+        </a>
+            
 
         <div>
             <ul class="sidebar-container">
@@ -72,7 +76,7 @@ $user = $result->fetch_assoc();
         <div class="content">
 
             <div class="content-2">
-                <h1>User Dashboard</h1>
+
                 <div class="upcome">
                     <div class="welcome">
                         <h4>Welcome back, <?= $user['first_name'] ?></h4>
@@ -80,15 +84,15 @@ $user = $result->fetch_assoc();
 
                     <div class="cards">
                         <!-- <a href=""> -->
-                            <div class="card shadow" id="cd-1">
-                                <div class="box-1">
-                                    <h2>My Courses</h2>
-                                    <h3>Purchased Courses</h3>
-                                </div>
-                                <div class="icon-case">
-                                    <img src="../assets/icons/course.png" alt="courses">
-                                </div>
+                        <div class="card shadow" id="cd-1">
+                            <div class="box-1">
+                                <h2>My Courses</h2>
+                                <h3>Purchased Courses</h3>
                             </div>
+                            <div class="icon-case">
+                                <img src="../assets/icons/course.png" alt="courses">
+                            </div>
+                        </div>
                         </a>
                         <div class="card shadow" id="cd-2">
                             <div class="box-1">
@@ -123,7 +127,7 @@ $user = $result->fetch_assoc();
 
 
                     <div class="content-2">
-                        <h1 id="my-courses" >My Courses</h1>
+                        <h1 id="my-courses">My Courses</h1>
                         <div class="upcome">
                             <div class="new-event">
                                 <h4>Course - 01</h4>
@@ -139,7 +143,7 @@ $user = $result->fetch_assoc();
                     </div>
 
                     <div class="content-2">
-                        <h1 id="completed-courses" >Completed Courses</h1>
+                        <h1 id="completed-courses">Completed Courses</h1>
                         <div class="upcome">
                             <div class="new-event">
                                 <h4>Course - 01</h4>
@@ -154,16 +158,10 @@ $user = $result->fetch_assoc();
                     </div>
 
                     <div class="content-2">
-                        <h1 id="learning-course" >Learning course</h1>
+                        <h1 id="learning-course">Learning course</h1>
                         <div class="upcome">
                             <div class="new-event">
                                 <h4>Course - 01</h4>
-                            </div>
-                            <div class="new-event">
-                                <h4>Course - 02</h4>
-                            </div>
-                            <div class="new-event">
-                                <h4>Course - 03</h4>
                             </div>
 
                         </div>
@@ -178,7 +176,7 @@ $user = $result->fetch_assoc();
                     ?>
                 </div>
             </div>
-            <script src="../scripts/user.js" ></script>
+            <script src="../scripts/user.js"></script>
 </body>
 
 </html>
