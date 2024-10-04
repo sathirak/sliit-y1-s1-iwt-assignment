@@ -1,8 +1,9 @@
 <?php
-    session_start();
-    if (isset($_SESSION['user_id']) && isset($_SESSION['role']) && $_SESSION['role'] != 'admin') {
-        header("Location: ../../sign-in");
-    }
+session_start();
+if (!isset($_SESSION['user_id']) && !isset($_SESSION['role']) && $_SESSION['role'] != 'admin') {
+    header("Location: ../sign-in");
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +30,7 @@
     if (!$result) {
         die("Invalid query: " . $conn->error);
     }
-    
+
     ?>
     <title>AcademiX | All Courses</title>
     <link rel="stylesheet" href="../../styles/global.css">

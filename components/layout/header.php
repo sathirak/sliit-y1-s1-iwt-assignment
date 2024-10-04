@@ -1,8 +1,16 @@
 <?php
 session_start();
+
 include "../../utils/auth.php";
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['sign_out'])) {
+  $_SESSION = [];
 
+  session_destroy();
+
+  header("Location: /");
+  exit;
+}
 
 ?>
 
@@ -18,23 +26,18 @@ include "../../utils/auth.php";
     </ul>
   </nav>
 
-  <a class="special-button" href="<?php
-                                  if (isset($_SESSION['user_id'])) {
-                                    $role = $_SESSION['user_role'];
+  <?php if (isset($_SESSION['user_id'])) { ?>
+    <a class="special-button" href="<?php
+                                    $role = $_SESSION['role'];
                                     echo $auth_info[$role]['redirect'];
-                                  } else {
-                                    echo "/sign-up";
-                                  }
-                                  ?>">
-    <?php
-    if (isset($_SESSION['user_id'])) {
-      $role = $_SESSION['user_role'];
-      echo $auth_info[$role]['button'];
-    } else {
-      echo "Sign Up";
-    }
-    ?>
-  </a>
-  </a>
+                                    ?>">
+      <?php echo $auth_info[$role]['button']; ?>
+    </a>
+    <form method="post" style="display:inline;">
+      <button type="submit" name="sign_out" class="special-button">Sign Out</button>
+    </form>
+  <?php } else { ?>
+    <a class="special-button" href="/sign-up">Sign Up</a>
+  <?php } ?>
 
 </header>

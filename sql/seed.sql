@@ -50,3 +50,18 @@ VALUES
 ( 'Sophia', 'Robinson', '4445556666', '1994-09-17', 'PhD in Literature', 'sophia789', 'sophia.robinson@example.com', 30),
 ( 'David', 'Clark', '1231231234', '1990-04-11', 'Bachelors in Psychology', 'clarkStrong123', 'david.clark@example.com', 34),
 ('Lily', 'Walker', '3213214321', '1996-02-02', 'Masters in Sociology', 'walkerSecure', 'lily.walker@example.com', 28);
+
+
+INSERT INTO admin (email, password, first_name, last_name) VALUES
+('admin1@example.com', 'password123', 'John', 'Doe'),
+('admin2@example.com', 'password456', 'Jane', 'Smith'),
+('admin3@example.com', 'password789', 'Alice', 'Johnson'),
+('admin4@example.com', 'password012', 'Bob', 'Brown'),
+('admin5@example.com', 'password345', 'Charlie', 'Davis');
+
+INSERT INTO contact_support_agent (email, password, first_name, last_name) VALUES
+('agent1@example.com', 'agentPassword123', 'Tom', 'Green'),
+('agent2@example.com', 'agentPassword456', 'Lucy', 'White'),
+('agent3@example.com', 'agentPassword789', 'Mike', 'Black'),
+('agent4@example.com', 'agentPassword012', 'Sara', 'Blue'),
+('agent5@example.com', 'agentPassword345', 'Nina', 'Red');
