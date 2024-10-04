@@ -128,7 +128,7 @@ input[type=text] {
 input[type=password],
 input[type=email],
 .para-1 input[type=text] {
-    width: 80%;
+    width: 100%;
     padding: 15px;
     margin: 5px 0 5px 0;
     display: inline-block;
@@ -138,27 +138,40 @@ input[type=email],
 }
 
 input[type=submit] {
-    width: 80%;
+    width: 100%;
 }
 
-.dropdown {
+/* .dropdown {
     position: relative;
     width: max-content;
     display: inline-block;
-}
+} */
 
-#dropbtn {
-    background-color: #95bdec;
+select {
+    width: 20rem;
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: solid 0.5px;
+    border-radius: 15px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    color: #4a4a4a;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+
+
+    /* background-color: #95bdec;
     color: white;
     padding: 10px;
     font-size: 16px;
     border: none;
     cursor: pointer;
     border-radius: 20px;
-    width: 300%;
+    width: 300%; */
 }
 
-.dropdown-content {
+/* .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -181,11 +194,11 @@ input[type=submit] {
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
+} */
 
 .check  {
     text-align: justify;
-    width: 80%;
+    width: 100%;
 }
 
 .button-signup {

@@ -1,12 +1,16 @@
 <?php
 
-// $servername = "127.0.0.1";
-// $username = "root";
-// $password = "";
-// $database = "studentms";
+//DB CONNECTION
 
-// $conn = new mysqli($servername, $username, $password, $database);
+require_once '../utils/su-config.php';
 
-// if ($conn->connect_error) {
-//     die("Connection failed: " . $conn->connect_error);
-// }
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $e_email = $_POST["email"];
+    $p_password = $_POST["password"];
+
+    //check email and pw
+    $sql = "SELECT * FROM users WHERE email = '$e_email' AND password = '$p_password'";
+    $result = mysqli_query($sql,$conn);
+
+    
+}

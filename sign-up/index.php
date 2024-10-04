@@ -1,6 +1,6 @@
 <?
 session_start()
-?>
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +33,7 @@ session_start()
                 <p>Already a member?
                     <button class="button" id="button">Sign In</button>
                     <script type="text/javascript">
-                        document.getElementById("button").onclick = function() {
+                        document.getElementById("button").onclick = function () {
                             location.href = "../sign-in";
                         };
                     </script>
@@ -52,16 +52,16 @@ session_start()
 
                 <div class="form-signup">
                     <form action="sign-up.inc.php" class="form" method="POST" autocomplete="on">
-                  
-                            <div class="fname container-col">
-                                <label for="firstname">First Name</label>
-                                <input type="text" id="f_name" name="f_name" placeholder="Enter first name" required>
-                            </div>
-                            <div class="lname container-col">
-                                <label for="lastname">Last Name</label>
-                                <input type="text" id="l_name" name="l_name" placeholder="Enter last name" required>
-                            </div>
-                        
+
+                        <div class="fname container-col">
+                            <label for="firstname">First Name</label>
+                            <input type="text" id="f_name" name="f_name" placeholder="Enter first name" required>
+                        </div>
+                        <div class="lname container-col">
+                            <label for="lastname">Last Name</label>
+                            <input type="text" id="l_name" name="l_name" placeholder="Enter last name" required>
+                        </div>
+
                         <div class="para container-col">
                             <label for="email">Email Address</label>
                             <input type="email" id="email" name="email" placeholder="Enter email address" required>
@@ -74,12 +74,20 @@ session_start()
 
 
                         <div class="dropdown">
-                            <button id="dropbtn" class="dropbtn" name="dropbtn" >Teacher At</button>
+                            <label for="role">Teacher at</label><br>
+                            <select id="role" name="role" required>
+                            <option value="">Teacher at</option>
+                                <option class="dropdown-content value="Private School">Private School</option>
+                                <option class="dropdown-content value="Government School">Government School</option>
+                                <option class="dropdown-content value="Tution Sector">Tution Sector</option>
+                            </select><br>
+
+                            <!-- <button id="dropbtn" class="dropbtn" name="dropbtn" >Teacher At</button>
                             <div class="dropdown-content container-col">
                                 <a href="#">Private School</a>
                                 <a href="#">Government School</a>
                                 <a href="#">Tution Sector</a>
-                            </div>
+                            </div> -->
                         </div>
 
                         <div class="pw container-col">
@@ -103,7 +111,7 @@ session_start()
                                 Settings.</label>
                         </div>
 
-                        <button type="submit" name="submit" class="button-signup" >Sign Up</button>
+                        <button type="submit" name="submit" class="button-signup">Sign Up</button>
                     </form>
                 </div>
             </div>
