@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (isset($_SESSION['user_id']) && isset($_SESSION['role']) && $_SESSION['role'] != 'reviewer') {
+    header("Location: ../sign-in");
+}
+
+?>
+
 <!DOCTYPE html>
 
 <head>
@@ -19,67 +27,67 @@
     <?php
     include "../components/layout/header.php";
     ?>
-    
 
-<body>
-    <div class="container">
-        <nav class="sidebar">
-            <ul>
-                <li><a href="#">Review</a></li>
-                <li><a href="#">Watch Courses</a></li>
-                <li><a href="#">Approved Courses</a></li>
-            </ul>
-        </nav>
 
-        <main>
-            <section class="review-section">
-                <h1>Review in Progress</h1>
-                <div class="course-card">
-                    <div class="course-icon">
-                        <img src="cloud_icon.png" alt="Course">
+    <body>
+        <div class="container">
+            <nav class="sidebar">
+                <ul>
+                    <li><a href="#">Review</a></li>
+                    <li><a href="#">Watch Courses</a></li>
+                    <li><a href="#">Approved Courses</a></li>
+                </ul>
+            </nav>
+
+            <main>
+                <section class="review-section">
+                    <h1>Review in Progress</h1>
+                    <div class="course-card">
+                        <div class="course-icon">
+                            <img src="cloud_icon.png" alt="Course">
+                        </div>
+                        <div class="course-details">
+                            <p>Mathematics</p>
+                            <p>Course description goes here...</p>
+                            <button class="btn-details">View Details</button>
+                            <button class="btn-reject">Reject</button>
+                            <button class="btn-approve">Approve</button>
+                        </div>
                     </div>
-                    <div class="course-details">
-                        <p>Mathematics</p>
-                        <p>Course description goes here...</p>
-                        <button class="btn-details">View Details</button>
-                        <button class="btn-reject">Reject</button>
-                        <button class="btn-approve">Approve</button>
-                    </div>
-                </div>
 
-                <div class="course-card">
-                    <div class="course-icon">
-                        <img src="cloud_icon.png" alt="Course">
+                    <div class="course-card">
+                        <div class="course-icon">
+                            <img src="cloud_icon.png" alt="Course">
+                        </div>
+                        <div class="course-details">
+                            <p>Physics</p>
+                            <p>Course description goes here...</p>
+                            <button class="btn-details">View Details</button>
+                            <button class="btn-reject">Reject</button>
+                            <button class="btn-approve">Approve</button>
+                        </div>
                     </div>
-                    <div class="course-details">
-                        <p>Physics</p>
-                        <p>Course description goes here...</p>
-                        <button class="btn-details">View Details</button>
-                        <button class="btn-reject">Reject</button>
-                        <button class="btn-approve">Approve</button>
+
+                    <div class="course-card">
+                        <div class="course-icon">
+                            <img src="cloud_icon.png" alt="Course">
+                        </div>
+                        <div class="course-details">
+                            <p>Inforation Technology</p>
+                            <p>Course description goes here...</p>
+                            <button class="btn-details">View Details</button>
+                            <button class="btn-reject">Reject</button>
+                            <button class="btn-approve">Approve</button>
+                        </div>
                     </div>
-                </div>
+                </section>
+            </main>
+        </div>
 
-                <div class="course-card">
-                    <div class="course-icon">
-                        <img src="cloud_icon.png" alt="Course">
-                    </div>
-                    <div class="course-details">
-                        <p>Inforation Technology</p>
-                        <p>Course description goes here...</p>
-                        <button class="btn-details">View Details</button>
-                        <button class="btn-reject">Reject</button>
-                        <button class="btn-approve">Approve</button>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </div>
+        <?php
+        include "../components/layout/footer.php";
+        ?>
 
-    <?php
-    include "../components/layout/footer.php";
-    ?>
+    </body>
 
-</body>
-
-</html>
+    </html>

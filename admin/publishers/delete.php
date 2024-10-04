@@ -7,7 +7,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['role']) && $_SESSION['role']
 include "../../utils/db.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $id = $_POST["user_id"];
+    $id = $_POST["publisher_id"];
     $sql = "DELETE FROM user WHERE user_id = $id";
     $result = $conn->query($sql);
 
