@@ -79,8 +79,8 @@ session_start()
                         </div>
 
                         <br>
-                        <div class="signup">
-                            <button type="submit" class="button-signin" onclick="alert('Hii')" name="submit" value="Sign In">
+                        <div class="signin">
+                        <input type="submit" name="submit" value="Sign In" class="button-signin"></input>
                         </div>
 
                     </form>
