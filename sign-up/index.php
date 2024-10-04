@@ -109,7 +109,7 @@ session_start()
                                 Settings.</label>
                         </div>
 
-                        <input type="submit" name="submit" class="button-signup">Sign Up</input>
+                        <input type="submit" name="submit" value="Sign Up" class="button-signup"></input>
                     </form>
                 </div>
             </div>
@@ -119,5 +119,3 @@ session_start()
 </body>
 
 </html>
-
-<!-- onclick="alert('Hii')" -->
