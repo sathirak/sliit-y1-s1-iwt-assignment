@@ -9,6 +9,7 @@ session_start()
 
     <?
     include "../components/layout/html.php";
+    include "../utils/db.php";
     ?>
 
     <link rel="stylesheet" href="../styles/global.css">
@@ -53,16 +54,16 @@ session_start()
                 </div>
 
                 <div class="form-signup">
-                    <form action="" class="form" method="POST" autocomplete="on">
+                    <form action="sign-in.php" class="form" method="POST" autocomplete="on">
 
                         <div class="para">
                             <label for="email">Email Address</label><br>
-                            <input type="email" id="email" name="email" placeholder="Enter email address" required>
+                            <input type="email" name="email" placeholder="Enter email address" required>
                         </div>
 
                         <div class="pw">
                             <label for="password">Password</label><br>
-                            <input type="password" id="password" name="password" placeholder="Enter 8 characters "
+                            <input type="password" name="password" placeholder="Enter 8 characters "
                                 required>
                         </div>
                         <br>
@@ -79,7 +80,7 @@ session_start()
 
                         <br>
                         <div class="signup">
-                            <input type="submit" class="button-signin" onclick="alert('Hii')" value="Sign In">
+                            <button type="submit" class="button-signin" name="submit">Sign In</button>
                         </div>
 
                     </form>

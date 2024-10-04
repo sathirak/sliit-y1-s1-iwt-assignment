@@ -33,3 +33,16 @@ CREATE TABLE course_publisher (
     last_name VARCHAR(100),
     CONSTRAINT pk_course_publisher PRIMARY KEY (publisher_id)
 );
+
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    contact_no VARCHAR(15),
+    date_of_birth DATE,
+    highest_qualification VARCHAR(100),
+    password VARCHAR(255),
+    email VARCHAR(100),
+    age INT,
+    CONSTRAINT pk_user PRIMARY KEY (user_id)
+);
