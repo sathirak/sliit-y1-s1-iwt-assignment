@@ -508,7 +508,7 @@ session_start();
                 <h3>Complaints</h3>
             </div>
             <p>If you have any questions about this privacy notice or our data handling practices, or you wish to make a
-                complaint, you may contact our Data Protection Officer at privacy@Register.lk.</p>
+                complaint, you may contact our Data Protection Officer at privacy@academix.lk.</p>
         </div>
 
     </div>
