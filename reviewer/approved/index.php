@@ -31,7 +31,7 @@ if (!isset($_SESSION['user_id']) && !isset($_SESSION['role']) && $_SESSION['role
     }
 
     ?>
-
+    <script src="../../scripts/approved.js"></script>
     <div class="container">
 
         <nav class="sidebar">
@@ -54,15 +54,12 @@ if (!isset($_SESSION['user_id']) && !isset($_SESSION['role']) && $_SESSION['role
                         <div class='row g-0'>
                             <div class='col-md-12'>
                                 <div class='card-body'>
-                                    <p class='card-text'><strong>Course ID:</strong> <?= $row['course_id'] ?></p>
                                     <h5 class='card-title'><?= $row['course_name'] ?></h5>
-                                    <p class='card-text'><?= $row['level'] ?></p>
-                                    <p class='card-text description'><strong>Description:</strong> <?= $row['description'] ?></p>
+                                    <p class='card-text course-level'><?= $row['level'] ?></p>
+                                    <p class='card-text description'><?= $row['description'] ?></p>
                                     <p class='card-text'><strong>Published Date:</strong> <?= $row['published_date'] ?></p>
                                     <p class='card-text'><strong>Price:</strong> $<?= $row['price'] ?></p>
                                     <p class='card-text'> <?= $row['duration'] ?> Weeks</p>
-                                    <p class='card-text'><strong>Subject ID:</strong> <?= $row['subject_id'] ?></p>
-
                                     <a class='btn btn-primary btn-sm' href='../course-reviewer/edit.php?id=<?= $row['course_id'] ?>'>View</a>
 
                                     <form action='reject.php' method='POST' style='display:inline;'>

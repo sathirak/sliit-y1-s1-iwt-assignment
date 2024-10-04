@@ -6,11 +6,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
         if (levelText === 'Beginner') {
-            levelElement.style.backgroundColor = 'yellow';
+            levelElement.style.backgroundColor = '#ffff50';
         } else if (levelText === 'Intermediate') {
-            levelElement.style.backgroundColor = 'red'
+            levelElement.style.backgroundColor = '#ff5353';
         } else if (levelText === 'Advanced') {
-            levelElement.style.backgroundColor = 'purple';;
+            levelElement.style.backgroundColor = '#9575CD';;
         }
     });
 });
