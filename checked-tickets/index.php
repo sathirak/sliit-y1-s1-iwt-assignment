@@ -16,7 +16,7 @@ $result = $conn->query($sql);
     <title>Pending Tickets</title>
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/components.css">
-    <link rel="stylesheet" href="../styles/pending-tickets.css">
+    <link rel="stylesheet" href="../styles/tickets.css">
 </head>
 
 <body>
