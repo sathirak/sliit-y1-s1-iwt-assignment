@@ -1,113 +1,108 @@
-<?php  include "../utils/db.php";   ?>
-
-<?php 
-// Check if form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $course_title = $_POST['course_title'];
-    $course_description = $_POST['course_description'];
-    $price = $_POST['price'];
-    $subject = $_POST['subject'];
-    $duration = $_POST['duration'];
-    
-    // Insert course into courses table
-    $course_sql = "INSERT INTO Courses (title, description, price, subject_id, duration) VALUES ('$course_title', '$course_description', '$price', '$subject', '$duration')";
-    if ($conn->query($course_sql) === TRUE) {
-        $course_id = $conn->insert_id; // Get the last inserted course_id
-
-        // Loop through lessons and insert them into lessons table
-        $lesson_titles = $_POST['lesson_video_url'];
-        $lesson_descriptions = $_POST['lesson_description'];
-        for ($i = 0; $i < count($lesson_titles); $i++) {
-            $lesson_title = $lesson_titles[$i];
-            $lesson_description = $lesson_descriptions[$i];
-            $lesson_sql = "INSERT INTO Lessons (course_id, title, content, lesson_order) VALUES ('$course_id', '$lesson_title', '$lesson_description', $i+1)";
-            if (!$conn->query($lesson_sql)) {
-                echo "Error adding lesson: " . $conn->error;
+<?php
+include "../utils/db.php";
+// SQL query foe get all subjects
+$sql = "SELECT * from subject;";
+// Execute the query
+$subjectResults = $conn->query($sql);
+// Check if the form is submitted
+if ($_POST) {
+    try {
+        //Get form details
+        $course_name = $_POST['course_name'];
+        $description = $_POST['description'];
+        $level = $_POST['level'];
+        $price = $_POST['price'];
+        $duration = $_POST['duration'];
+        $subject = $_POST['subject'];
+        // SQL query to insert course data
+        $sql = "INSERT INTO course (course_name, description, level, price, duration, subject_id, status) 
+        VALUES ('$course_name', '$description', '$level', '$price', '$duration', $subject, 'pending');";
+        // Execute the query
+        if ($conn->query($sql) === TRUE) {
+            // Get the inserted course ID
+            $course_id = $conn->insert_id;
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+        if (isset($_POST['lessons']) && is_array($_POST['lessons'])) {
+            $values = array();
+            foreach ($_POST['lessons'] as $lesson) {
+                $lesson_title = $lesson['title'];
+                $lesson_description = $lesson['description'];
+                $lesson_video_url = $lesson['video_url'];
+                array_push($values, "($course_id, '$lesson_title', '$lesson_description', '$lesson_video_url')");
+            }
+            $sql = "INSERT INTO lesson (course_id, title, description, video_url) VALUES " . join(',', $values) . ";";
+            // Execute the query
+            if ($conn->query($sql) !== TRUE) {
+                echo "Error: " . $sql . "<br>" . $conn->error;
             }
         }
-
-        echo "<p class='success'>Course and lessons added successfully!</p>";
-    } else {
-        echo "Error adding course: " . $conn->error;
+        echo "New course created successfully.";
     }
+    catch(Exception $e) {
+        echo "Course creation failed! Please try again." . $e;
+    }
+    // Close the database connection
+    $conn->close();
 }
- 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Course</title>
-    <link rel="stylesheet" href="../styles/course/create-page-styles.css">
+    <title>Create New Course with Lessons</title>
     <link rel="stylesheet" href="../styles/global.css" />
-    <link rel="stylesheet" href="../styles/components.css" /> 
-
-    <script>
-        // Function to add new lesson fields
-        function addLesson() {
-            const lessonsContainer = document.getElementById('lessons-container');
-            const lessonIndex = lessonsContainer.children.length;
-
-            const newLesson = `
-            <div class="lesson">
-                <label for="lesson_video_url">Lesson Video URL</label>
-                <input type="url" id="lesson_video_url" name="lesson_video_url[]" required>
-
-                <label for="lesson_description">Lesson Description</label>
-                <textarea id="lesson_description" name="lesson_description[]" required></textarea>
-            </div>
-            `;
-            lessonsContainer.insertAdjacentHTML('beforeend', newLesson);
-        } 
-    </script>
+    <link rel="stylesheet" href="../styles/components.css" />
+    <link rel="stylesheet" href="../styles/course/create.css" /> 
 </head>
 <body>
+    <?php include "../components/layout/header.php"; ?>
     <div class="container">
-        <h1>Create a New Course</h1>
-        <form method="POST" action="create.php">
-            <label for="course_title">Course Title</label>
-            <input type="text" id="course_title" name="course_title" required>
+        <h1>Create New Course with Lessons</h1>
+        <form id="courseForm" method="POST">
+            <h2>Course Details</h2>
+            <label for="course_name">Course Name:</label>
+            <input type="text" id="course_name" name="course_name" required>
+            
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+            
+            <label for="level">Level:</label>
+            <select id="level" name="level" required>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+           
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" min="0" step="0.01" required>
+            
+            <label for="duration">Total Duration (in hours):</label>
+            <input type="number" id="duration" name="duration" min="1" required>
+             
 
-            <label for="course_description">Course Description</label>
-            <textarea id="course_description" name="course_description" required></textarea>
-
-            <label for="price">Price</label>
-            <input type="number" step="0.01" id="price" name="price" required>
-
-            <label for="subject">Subject</label>
-            <select id="subject" name="subject" required>
+            <select id="level" name="subject" required>
                 <?php
-                // Fetch subjects from the database
-                $subject_sql = "SELECT subject_id, name FROM Subjects;";
-                $result = $conn->query($subject_sql);
-
-                if ($result->num_rows > 0) {
-                    while($row = $result->fetch_assoc()) {
-                        echo "<option value='" . $row["subject_id"] . "'>" . $row["name"] . "</option>";
-                    }
-                }
-                ?>
+while ($row = $subjectResults->fetch_assoc()) {
+    echo "<option value='" . $row['subject_id'] . "'>" . $row["name"] . "</option>";
+}
+?>  
             </select>
 
-            <label for="duration">Duration (in hours)</label>
-            <input type="number" step="0.1" id="duration" name="duration" required>
-
-            <h2>Lesson Details</h2>
-            <div id="lessons-container">
-                <div class="lesson">
-                    <label for="lesson_video_url">Lesson Video URL</label>
-                    <input type="url" id="lesson_video_url" name="lesson_video_url[]" required>
-
-                    <label for="lesson_description">Lesson Description</label>
-                    <textarea id="lesson_description" name="lesson_description[]" required></textarea>
-                </div>
-            </div>
-
-            <button type="button" onclick="addLesson()">Add Another Lesson</button>
+            <h2>Lessons</h2>
+            <div id="lessonsContainer"></div>
+            <button type="button" id="addLessonBtn">Add Lesson</button>
+            
             <button type="submit">Create Course</button>
         </form>
     </div>
+ 
+    <script src="../../scripts/createCourse.js"></script>
+
+    <?php include "../components/layout/footer.php"; ?>
 </body>
 </html>

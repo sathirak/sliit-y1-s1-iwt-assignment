@@ -16,12 +16,12 @@
     $search_query = isset($_GET['search']) ? $conn->real_escape_string($_GET['search']) : '';
 
     if (!empty($search_query)) {
-        $sql = "SELECT * FROM users 
+        $sql = "SELECT * FROM user
         WHERE first_name LIKE '%$search_query%' 
         OR last_name LIKE '%$search_query%' 
         OR email LIKE '%$search_query%'";
     } else {
-        $sql = "SELECT * FROM users";
+        $sql = "SELECT * FROM user";
     }
 
     $result = $conn->query($sql);
