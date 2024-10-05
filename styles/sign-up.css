@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--app-primary);
+}
+
+/*Left Side */
+.signup-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.imag,
+.content {
+    padding: 20px;
+}
+
+.imag {
+    text-align: right;
+    align-content: center;
+}
+
+.content {
+    align-content: stretch;
+    padding: 10px;
+    height: 100vh;
+}
+
+.start {
+    text-align: right;
+    padding: 50px;
+    align-items: center;
+}
+
+.image_1 img {
+    width: 500px;
+    height: 500px;
+    align-items: center;
+}
+
+/* Right Side */
+
+.up {
+    float: right;
+}
+
+.button {
+    border: none;
+    padding: 5px 10px;
+    background-color: var(--app-primary);
+    color: var(--app-white);
+    border-radius: 2rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.button:hover {
+    background-color: var(--app-white);
+    color: var(--app-primary);
+}
+
+.head {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.form-content {
+    padding-left: 10px;
+    padding-top: 50px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+}
+
+.form-signup {
+    padding-left: 100px;
+}
+
+.form {
+    padding: 20px;
+    width: 600px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.container-col {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.fname,
+.lname {
+    display: inline-block;
+}
+
+
+input[type=password],
+input[type=email],
+input[type=text],
+[type="date"] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 5px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 20px;
+}
+
+input[type=submit] {
+    width: 100%;
+}
+
+select {
+    width: 20rem;
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: solid 0.5px;
+    border-radius: 15px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    color: #4a4a4a;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.check {
+    text-align: justify;
+    width: 100%;
+}
+
+.button-signup {
+    border: none;
+    padding: 10px 20px;
+    background-color: var(--app-primary);
+    color: var(--app-white);
+    border-radius: 2rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.button:hover,
+.button-signup:hover {
+    background-color: var(--app-white);
+    color: var(--app-primary);
+}

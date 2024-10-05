@@ -75,6 +75,7 @@
   background-color: var(--app-white);
   border: none;
   padding: 10px 20px;
+  margin-inline: 10px;
   color: var(--app-primary);
   font-weight: bold;
   border-radius: 2rem;
