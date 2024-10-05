@@ -85,6 +85,7 @@ $user = $result->fetch_assoc();
     </div>
 
     <div class="container">
+       
         <header class="header-user">
             <div class="search-bar">
                 <input type="text" placeholder="Search Courses...">
@@ -104,9 +105,9 @@ $user = $result->fetch_assoc();
 
                 <div class="upcome">
                     <div class="welcome">
-                        <h4>Welcome back, <?= $user['first_name'] ?></h4>
+                        <h3>Welcome back, <?= $user['first_name'] ?></h3>
                         <header class="dashboard-header">
-                            <button class="add-course-btn">Add New Course</button>
+                            <button class="add-course-btn"><span class="ico-text">+ </span>Add New Course</button>
                         </header>
                     </div>
 

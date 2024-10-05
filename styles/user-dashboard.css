@@ -16,11 +16,11 @@ li {
   list-style-type: none;
 }
 
-h1,
+/* h1,
 h2,
 h3 {
   color: var(--app-primary);
-}
+} */
 
 /*side navigation bar*/
 .side-bar {
@@ -114,6 +114,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  transition: 0.3s;
 }
 
 .icon-case img {
@@ -132,7 +133,9 @@ h3 {
 
 .card:hover,
 .welcome:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6)
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
+  opacity: 1;
+  scroll-behavior: smooth;
 }
 
 .upcome {
@@ -157,7 +160,9 @@ h3 {
 }
 
 .new-event:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6)
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
+  opacity: 1;
+  scroll-behavior: smooth;
 }
 
 .welcome {
@@ -175,6 +180,9 @@ h3 {
 
 .welcome:hover {
   box-shadow: 0 8px 16px 0 rgba(56, 145, 223, 0.2)
+}
+.ico-text {
+  font-size: 20px;
 }
 
 .dashboard-header {
