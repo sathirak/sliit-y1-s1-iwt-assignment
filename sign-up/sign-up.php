@@ -16,10 +16,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     include '../utils/db.php';
 
-    $sql = "INSERT INTO user (first_name, last_name, contact_no, date_of_birth, highest_qualification, password, email, age) VALUES ('$fname', '$lname', '$contact', '$dob', '$h_qualification', '$u_password', '$email', '$age');";
+    $sql = "INSERT INTO user (first_name, last_name, contact_no, date_of_birth, highest_qualification, password, email) VALUES ('$fname', '$lname', '$contact', '$dob', '$h_qualification', '$u_password', '$email');";
 
     $result = $conn->query($sql);
-
+    header("Location: ../user");
     if (!$result) {
         die("Invalid query: " . $conn->error);
     }
