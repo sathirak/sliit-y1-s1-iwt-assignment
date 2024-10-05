@@ -14,6 +14,7 @@ session_start();
     ?>
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
@@ -26,14 +27,15 @@ session_start();
         <div class="main-container">
             <div>
                 <h1 class="heading">
-                    Empowering Educators, Shaping Futures
+                    Find Your Perfect <br> Course And Improve <br> Your Skills
                 </h1>
-                <p class="main-para">Learn from hundreds of educational courses made by seasoned professionals to improve your teaching skills</p>
-                <a href="/all-courses"><button class="button">Get Started</button></a>
+                <p class="main-para">Unlock your potential with expertly designed courses tailored for teachers of all
+                    levels. Learn innovative strategies, master new technologies, and enhance your teaching techniques
+                    with guidance from top educators and industry professionals.</p>
+                    <br>
+                <a href="all-courses/index.php"><button class="button">Get Started</button></a>
             </div>
-
-
-            <img class="main-banner" src="/assets/images/main.jpg" alt="Main Banner of Academix">
+            <img class="main-banner" src="assets/images/mb.png" alt="Main Banner of Academix">
         </div>
 
     </main>
