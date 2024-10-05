@@ -3,21 +3,8 @@ session_start();
 
 include '../utils/db.php';
 
-// Handle status updates when "Check" or "Reject" is clicked
-if (isset($_POST['action']) && isset($_POST['ticket_id'])) {
-    $ticket_id = $_POST['ticket_id'];
-    $new_status = ($_POST['action'] === 'check') ? 'Checked' : 'Rejected';
-
-    // Update the status of the selected ticket
-    $sql_update = "UPDATE inquiries SET status = ? WHERE id = ?";
-    $stmt_update = $conn->prepare($sql_update);
-    $stmt_update->bind_param('si', $new_status, $ticket_id);
-    $stmt_update->execute();
-    $stmt_update->close();
-}
-
 // SQL query to fetch tickets with status 'New'
-$sql = "SELECT id, inquiry_type, full_name, contact_no, email, address, message, status FROM inquiries WHERE status = 'pending'";
+$sql = "SELECT id, inquiry_type, full_name, contact_no, email, address, message, status FROM inquiries WHERE status = 'Checked' OR status = 'Rejected'";
 $result = $conn->query($sql);
 ?>
 
@@ -29,7 +16,7 @@ $result = $conn->query($sql);
     <title>Pending Tickets</title>
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/components.css">
-    <link rel="stylesheet" href="../styles/tickets.css">
+    <link rel="stylesheet" href="../styles/pending-tickets.css">
 </head>
 
 <body>
@@ -40,8 +27,8 @@ $result = $conn->query($sql);
         <div class="container">
             <nav1>
                 <ul>
-                    <li><a class="active" href="pending-tickets">Pending Tickets</a></li>
-                    <li><a href="/checked-tickets">Checked Tickets</a></li>
+                    <li><a href="/pending-tickets">Pending Tickets</a></li>
+                    <li><a class="active"  href="/checked-tickets">Checked Tickets</a></li>
                 </ul>
             </nav1>
 
@@ -60,7 +47,13 @@ $result = $conn->query($sql);
                             <p><strong>Contact Number:</strong> <?php echo $ticket['contact_no']; ?></p>
                             <p><strong>Email:</strong> <?php echo $ticket['email']; ?></p>
                             <p><strong>Address:</strong> <?php echo $ticket['address']; ?></p>
-                            <p><strong>Status:</strong> <?php echo $ticket['status']; ?></p>
+                            <p><strong>Status:</strong>                                 
+                            <?php                                 
+                            if ($ticket['status'] == 'Checked') {                
+                                                    echo '<button class="status-checked">Checked</button>';                     
+                                                               } elseif ($ticket['status'] == 'Rejected') {      
+                                                                                              echo '<button class="status-rejected">Rejected</button>';                
+                                                                                                              }                                ?>                            </p>
                             <div class="ticket-actions">
                             <button class="view-btn"  data-id="<?php echo $ticket['id']; ?>" 
                                         data-inquiry-type="<?php echo $ticket['inquiry_type']; ?>" 
@@ -72,12 +65,6 @@ $result = $conn->query($sql);
                                     View
                                 </button>
                                 
-                                <!-- Form to update the status -->
-                                <form method="POST" action="">
-                                    <input type="hidden" name="ticket_id" value="<?php echo $ticket['id']; ?>">
-                                    <button type="submit" name="action" value="check" class="view-details">Check</button>
-                                    <button type="submit" name="action" value="reject" class="reject">Reject</button>
-                                </form>
                      
                             </div>
                         </div>
