@@ -64,12 +64,13 @@ $user = $result->fetch_assoc();
 
 
     <div class="side-bar">
-        <a href="../index.php">
+        <div class="side-img">
+            <a href="../index.php">
             <div class="logo">
                 <img src="../assets/images/logo.png" alt="logo">
             </div>
         </a>
-
+        </div>
 
         <div>
             <ul class="sidebar-container">
