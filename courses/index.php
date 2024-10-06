@@ -54,7 +54,7 @@
                                                 <p class='card-text'><strong>Published Date:</strong> {$row['published_date']}</p>
                                                 <p class='card-text'><strong>Price:</strong> \${$row['price']}</p>
                                                 <p class='card-text'><strong>Duration:</strong> {$row['duration']} Weeks</p>
-                                                <a class='btn btn-primary btn-sm' href='../all-courses/edit.php?id={$row['course_id']}'>View</a>
+                                                <a class='btn btn-primary btn-sm' href='../courses/watch.php?course_id={$row['course_id']}'>View</a>
                                             </div>
                                         </div>
                                     </div>
