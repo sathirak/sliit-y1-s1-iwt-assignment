@@ -9,35 +9,6 @@ $user_id = $_SESSION['user_id'];
 $sql = "SELECT * FROM user WHERE user_id = '$user_id'";
 $result = $conn->query($sql);
 $user = $result->fetch_assoc();
-
-
-// -----------//-------------
-
-
-// include "../utils/config.php";
-
-// $user_id = $_SESSION['user_id'];
-
-// if (!isset($user_id)) {
-//     header("Location: ../sign-in");
-//     exit();
-// }
-
-
-// $sql = "SELECT c.course_id, c.course_name, c.description, c.duration, uec.started_at FROM course.c, user_enrolls_course.uec WHERE c.course_id = uec.course_id AND uec.user_id = $user_id";
-// $result = $conn->query($sql);
-
-// if ($result->num_rows > 0) {
-//     while ($row = $result->fetch_assoc()) {
-//         echo "<tr>";
-//         echo "<td>" . $row['course_name'] . "</td>";
-//         echo "<td>" . $row['started_at'] . "</td>";
-//         echo "<td>" . $row['completed_at'] . "</td>";
-//         echo "<td>";
-//     }
-// }else{
-//     echo "<tr><td colspan='4'>No enrolled courses found.</td></tr>";
-// }
 ?>
 
 
