@@ -8,7 +8,6 @@ $auth_info = [
   "publisher" => ["table" => "course_publisher", "id_field" => "publisher_id", "redirect" => "../publisher", "button" => "Publisher"]
 ];
 
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['sign_out'])) {
   $_SESSION = [];
   session_destroy();
