@@ -33,11 +33,8 @@
     include "../components/layout/header.php";
     ?>
 
-
-
     <main>
         <h1 class="heading">Browse All Our Courses</h1>
-
 
         <form action="" method="GET" class="search-bar search-bar-margin">
             <input type="text" id="search-input" name="search" placeholder="Search Courses..." value="<?= $search_query ?>" oninput="searchCourses()">
@@ -59,13 +56,12 @@
                                             <div class='col-md-12'>
                                                 <div class='card-body'>
                                                     <h5 class='card-title'><?= $row['course_name'] ?></h5>
-                                                    <p class='card-text'><strong>Course ID:</strong> <?= $row['course_id'] ?></p>
                                                     <p class='card-text course-level'><?= $row['level'] ?></p>
-                                                    <p class='card-text description'><strong>Description:</strong> <?= $row['description'] ?></p>
-                                                    <p class='card-text'><strong>Published Date:</strong> <?= $row['published_date'] ?></p>
-                                                    <p class='card-text'><strong>Price:</strong> \$<?= $row['price'] ?></p>
-                                                    <p class='card-text'><strong>Duration:</strong> <?= $row['duration'] ?> Weeks</p>
-                                                    <a class='btn btn-primary btn-sm' href='../courses/watch.php?course_id={$row[' course_id']}'>View</a>
+                                                    <p class='card-text description'> <?= $row['description'] ?></p>
+                                                    <p class='card-text'><strong>Published</strong> <?= $row['published_date'] ?></p>
+                                                    <p class='card-text'><strong>Price:</strong> $<?= $row['price'] ?></p>
+                                                    <p class='card-text'> $<?= $row['price'] ?> <span class="course-weeks"> <?= $row['duration'] ?> Weeks</span></p>
+                                                    <a class='btn btn-primary btn-sm' href='../courses/watch.php?course_id=<?= $row['course_id'] ?>'>View</a>
                                                 </div>
                                             </div>
                                         </div>
