@@ -3,7 +3,6 @@ session_start();
 
 include '../utils/db.php';
 
-// Initialize variables for validation errors and form data
 $errors = array(
     'inquiry_type' => '',
     'full_name' => '',
@@ -50,18 +49,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // If no errors, insert into database
     if (!array_filter($errors)) {
-        // SQL query to insert data into the table
+
         $sql = "INSERT INTO inquiries (inquiry_type, full_name, contact_no, email, address, message)
                 VALUES (?, ?, ?, ?, ?, ?)";
 
-        // Prepare the statement
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("ssssss", $inquiry_type, $full_name, $contact_no, $email, $address, $message);
 
         if ($stmt->execute()) {           
-            // Set flag to show toast message
             $show_toast = true;
-            // Clear form variables after successful submission
             $inquiry_type = $full_name = $contact_no = $email = $address = $message = '';
         } else {
             echo "<p>There was an error: " . $stmt->error . "</p>";
@@ -111,27 +107,27 @@ include "../components/layout/header.php";
                 <div class="error"><?php echo $errors['inquiry_type']; ?></div>
 
                 <label for="full-name">Full Name*</label>
-                <input type="text" id="full-name" name="full-name" value="<?php echo htmlspecialchars($full_name); ?>" required>
+                <input type="text" id="full-name" name="full-name" value="<?= $full_name; ?>" required>
                 <br>
                 <div class="error"><?php echo $errors['full_name']; ?></div>
 
                 <label for="contact-no">Contact No*</label>
-                <input type="number" id="contact-no" name="contact-no" value="<?php echo htmlspecialchars($contact_no); ?>" required>
+                <input type="number" id="contact-no" name="contact-no" value="<?= $contact_no; ?>" required>
                 <br>
                 <div class="error"><?php echo $errors['contact_no']; ?></div>
 
                 <label for="email">Email*</label>
-                <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($email); ?>" required>
+                <input type="email" id="email" name="email" value="<?= $email; ?>" required>
                 <br>
                 <div class="error"><?php echo $errors['email']; ?></div>
 
                 <label for="address">Address*</label>
-                <input type="text" id="address" name="address" value="<?php echo htmlspecialchars($address); ?>" required>
+                <input type="text" id="address" name="address" value="<?= $address; ?>" required>
                 <br>
                 <div class="error"><?php echo $errors['address']; ?></div>
 
                 <label for="message">Your Message</label>
-                <textarea id="message" name="message"><?php echo htmlspecialchars($message); ?></textarea>
+                <textarea id="message" name="message"><?= $message; ?></textarea>
                 <br>
 
                 <button type="submit">Submit</button>
