@@ -49,6 +49,7 @@ $result = $conn->query($sql);
                                 <p><strong>Contact Number:</strong> <?php echo $ticket['contact_no']; ?></p>
                                 <p><strong>Email:</strong> <?php echo $ticket['email']; ?></p>
                                 <p><strong>Address:</strong> <?php echo $ticket['address']; ?></p>
+                                <p><strong>Status:</strong> <?php echo $ticket['status']; ?></p>
                                 <div class="ticket-actions">
                                     <button class="view-btn" data-id="<?php echo $ticket['id']; ?>"
                                         data-inquiry-type="<?php echo $ticket['inquiry_type']; ?>"

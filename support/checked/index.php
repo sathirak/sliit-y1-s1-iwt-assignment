@@ -52,10 +52,10 @@ $result = $conn->query($sql);
                                 <p><strong>Address:</strong> <?php echo $ticket['address']; ?></p>
                                 <p><strong>Status: <?php echo $ticket['status']; ?></strong>
                                     <?php
-                                    if ($ticket['status'] == 'Checked') {
-                                        echo '<button class="status-checked">Checked</button>';
-                                    } elseif ($ticket['status'] == 'Rejected') {
-                                        echo '<button class="status-rejected">Rejected</button>';
+                                    if ($ticket['status'] == 'checked') {
+                                        echo '<button class=" status-checked ">Checked</button>';
+                                    } elseif ($ticket['status'] == 'rejected') {
+                                        echo '<button class=" status-rejected ">Rejected</button>';
                                     }                                ?> </p>
                                 <div class="ticket-actions">
                                     <button class="view-btn" data-id="<?php echo $ticket['id']; ?>"

@@ -2,8 +2,8 @@
 
 $auth_info = [
   "user" =>  ["redirect" => "../user", "button" => "Dashboard"],
-  "admin" => ["redirect" => "../admin", "button" => "Administrator"],
-  "support" => ["redirect" => "../support", "button" => "Support"],
+  "admin" => ["redirect" => "/admin", "button" => "Administrator"],
+  "support" => ["redirect" => "/support", "button" => "Support"],
   "reviewer" => ["redirect" => "../reviewer", "button" => "Reviewer"],
   "publisher" => ["redirect" => "../publisher", "button" => "Publisher"]
 ];

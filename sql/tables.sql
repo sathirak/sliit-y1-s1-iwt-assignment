@@ -63,12 +63,10 @@ CREATE TABLE inquiries (
   email VARCHAR(255) DEFAULT NULL,
   address VARCHAR(255) DEFAULT NULL,
   message TEXT,
-  status VARCHAR(255) DEFAULT 'Pending',
+  status VARCHAR(255) DEFAULT 'pending',
   created_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (id)
 );
-
-
 
 CREATE TABLE course (
     course_id INT PRIMARY KEY AUTO_INCREMENT,
