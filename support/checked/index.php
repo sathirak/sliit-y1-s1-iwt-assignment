@@ -1,7 +1,7 @@
 <?php
 // Check if user is signed in
 session_start();
-if (!isset($_SESSION['user_id']) && !isset($_SESSION['role']) && $_SESSION['role'] != 'support') {
+if (!isset($_SESSION['user_id']) || !isset($_SESSION['role']) || $_SESSION['role'] != 'support') {
     header("Location: ../../sign-in");
 }
 
@@ -50,7 +50,7 @@ $result = $conn->query($sql);
                                 <p><strong>Contact Number:</strong> <?php echo $ticket['contact_no']; ?></p>
                                 <p><strong>Email:</strong> <?php echo $ticket['email']; ?></p>
                                 <p><strong>Address:</strong> <?php echo $ticket['address']; ?></p>
-                                <p><strong>Status:</strong>
+                                <p><strong>Status: <?php echo $ticket['status']; ?></strong>
                                     <?php
                                     if ($ticket['status'] == 'Checked') {
                                         echo '<button class="status-checked">Checked</button>';

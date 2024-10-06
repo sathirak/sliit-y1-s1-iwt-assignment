@@ -1,67 +1,112 @@
-INSERT INTO course_publisher (email, password, contact_no, qualification, current_position, first_name, last_name)
-VALUES
-('john.doe@example.com', 'password123', '1234567890', 'MSc Computer Science', 'Lead Developer', 'John', 'Doe'),
-('jane.smith@example.com', 'mypassword456', '0987654321', 'BSc Mathematics', 'Data Scientist', 'Jane', 'Smith'),
-('mike.jones@example.com', 'securepass789', '1231231234', 'PhD Physics', 'Professor', 'Mike', 'Jones'),
-('alice.brown@example.com', 'password890', '9876543210', 'MBA Finance', 'Financial Analyst', 'Alice', 'Brown'),
-('emma.johnson@example.com', 'bestpass123', '6543219870', 'BA English', 'Content Writer', 'Emma', 'Johnson'),
-('oliver.williams@example.com', 'mypassword321', '3216549870', 'BSc Chemistry', 'Lab Technician', 'Oliver', 'Williams'),
-('sophia.taylor@example.com', 'strongpass456', '7894561230', 'MSc Biology', 'Research Scientist', 'Sophia', 'Taylor'),
-('liam.davis@example.com', 'mypassword789', '8529637410', 'BEng Mechanical Engineering', 'Mechanical Engineer', 'Liam', 'Davis'),
-('ava.martin@example.com', 'securepass654', '1593574560', 'PhD Psychology', 'Clinical Psychologist', 'Ava', 'Martin'),
-('noah.thomas@example.com', 'bestpass456', '4561237890', 'BSc Computer Science', 'Software Engineer', 'Noah', 'Thomas');
+USE academix;
+
+INSERT INTO subject (name) VALUES 
+('Mathematics'),
+('Physics'),
+('Computer Science'),
+('Business Studies'),
+('Chemistry'),
+('Biology'),
+('History'),
+('Psychology'),
+('Economics'),
+('Engineering');
+
+INSERT INTO user (first_name, last_name, contact_no, date_of_birth, highest_qualification, email, password) VALUES 
+('Thilakshi', 'Weliwatta', '0771234567', '1990-05-12', 'B.Sc. Mathematics', 'thilakshi@academix.lk', 'password'),
+('Sanjeewa', 'Beddegane', '0719876543', '1993-11-23', 'B.Sc. Criminal FOrensics', 'sanjeewa.b@gmail.com', ':)'),
+('Amali', 'Fernando', '0724567890', '1995-07-14', 'B.A. Business Studies', 'amali.fernando@gmail.com', 'password'),
+('Shanika', 'Wijesinghe', '0766543210', '1998-03-09', 'A/L Science', 'shanika.wijesinghe@gmail.com', 'password'),
+('Ruwan', 'Jayasinghe', '0754321098', '1991-09-18', 'B.Sc. Engineering', 'ruwan.jayasinghe@gmail.com', 'password');
 
 
-INSERT INTO course_reviewer (email, password, contact_no, first_name, last_name, current_position) 
-VALUES 
-('alice.smith@example.com', 'password123', '1234567890', 'Alice', 'Smith', 'Course Director'),
-('bob.johnson@example.com', 'securePass!456', '2345678901', 'Bob', 'Johnson', 'Lead Reviewer'),
-('charlie.brown@example.com', 'mySecret789', '3456789012', 'Charlie', 'Brown', 'Content Strategist'),
-('david.wilson@example.com', 'passW0rd321', '4567890123', 'David', 'Wilson', 'Senior Reviewer'),
-('eve.davis@example.com', 'Eve@2024', '5678901234', 'Eve', 'Davis', 'Curriculum Developer'),
-('frank.miller@example.com', 'fR@nK5678', '6789012345', 'Frank', 'Miller', 'Quality Assurance Lead'),
-('grace.taylor@example.com', 'GracE!2024', '7890123456', 'Grace', 'Taylor', 'Academic Reviewer'),
-('henry.martinez@example.com', 'H3nry@pass', '8901234567', 'Henry', 'Martinez', 'Learning Consultant'),
-('isabella.jones@example.com', 'IsAbella123!', '9012345678', 'Isabella', 'Jones', 'Program Manager'),
-('jackson.brown@example.com', 'Jack$on2024', '0123456789', 'Jackson', 'Brown', 'E-Learning Specialist');
+INSERT INTO course_publisher (email, password, contact_no, qualification, current_position, first_name, last_name) VALUES 
+('sachintha@academix.lk', 'password', '0711234567', 'M.Sc. System Design', 'Lecturer', 'Sachintha', 'Heshan'),
+('publisher2@academix.lk', 'password', '0722345678', 'Ph.D. Physics', 'Senior Lecturer', 'Nadeeka', 'Perera'),
+('publisher3@academix.lk', 'password', '0733456789', 'M.Sc. Computer Science', 'Instructor', 'Kumara', 'Dissanayake'),
+('publisher4@academix.lk', 'password', '0744567890', 'Ph.D. Economics', 'Professor', 'Thilina', 'Wickramasinghe'),
+('publisher5@academix.lk', 'password', '0755678901', 'MBA Business Studies', 'Lecturer', 'Chathura', 'Wijesekara');
 
-INSERT INTO course ( course_name, level, thumbnail_url, description, published_date, price, duration, subject_id )
-VALUES 
-( 'Introduction to Python', 'Beginner', 'https://example.com/python.jpg', 'Learn the basics of Python programming', '2024-01-15', 49.99, 30, 101),
-( 'Advanced JavaScript', 'Advanced', 'https://example.com/js-adv.jpg', 'Master advanced JavaScript concepts', '2024-02-01', 79.99, 45, 102),
-( 'Data Science Fundamentals', 'Intermediate', 'https://example.com/data-sci.jpg', 'Introduction to data science principles', '2024-02-15', 69.99, 40, 103),
-( 'Web Development with React', 'Intermediate', 'https://example.com/react.jpg', 'Build modern web applications with React', '2024-03-01', 59.99, 35, 102),
-( 'Machine Learning Basics', 'Beginner', 'https://example.com/ml-basics.jpg', 'Get started with machine learning concepts', '2024-03-15', 54.99, 25, 103),
-( 'SQL for Beginners', 'Beginner', 'https://example.com/sql-begin.jpg', 'Learn the fundamentals of SQL', '2024-04-01', 39.99, 20, 104),
-( 'Cybersecurity Essentials', 'Intermediate', 'https://example.com/cybersec.jpg', 'Understand key cybersecurity principles', '2024-04-15', 74.99, 50, 105),
-( 'Mobile App Development', 'Advanced', 'https://example.com/mobile-dev.jpg', 'Create mobile apps for iOS and Android', '2024-05-01', 89.99, 60, 106),
-( 'Cloud Computing Basics', 'Beginner', 'https://example.com/cloud-basics.jpg', 'Introduction to cloud computing concepts', '2024-05-15', 44.99, 25, 107),
-( 'Artificial Intelligence Ethics', 'Advanced', 'https://example.com/ai-ethics.jpg', 'Explore ethical considerations in AI', '2024-06-01', 64.99, 30, 108);
+INSERT INTO course_reviewer (email, password, contact_no, first_name, last_name, current_position) VALUES 
+('kavindu@academix.lk', 'password', '0779876543', 'Kavindu', 'Liyanage', 'Professor'),
+('reviewer2@academix.lk', 'password', '0788765432', 'Tharindu', 'Karunaratne', 'Senior Lecturer'),
+('reviewer3@academix.lk', 'password', '0797654321', 'Isuru', 'Bandara', 'Lecturer'),
+('reviewer4@academix.lk', 'password', '0706543210', 'Udara', 'Rathnayake', 'Instructor'),
+('reviewer5@academix.lk', 'password', '0715432109', 'Dilshan', 'Senanayake', 'Lecturer');
 
-INSERT INTO user (first_name, last_name, contact_no, date_of_birth, highest_qualification, password, email)
-VALUES 
-( 'John', 'Doe', '1234567890', '1990-05-14', 'Bachelors in Computer Science', 'password123', 'john.doe@example.com'),
-( 'Jane', 'Smith', '9876543210', '1992-08-22', 'Masters in Physics', 'securePass456', 'jane.smith@example.com'),
-( 'Michael', 'Johnson', '5556667777', '1988-11-30', 'PhD in Chemistry', 'password789', 'michael.johnson@example.com'),
-( 'Emily', 'Davis', '2223334444', '1995-01-15', 'Bachelors in Biology', 'myPass321', 'emily.davis@example.com'),
-( 'Daniel', 'Miller', '1112223333', '1991-06-10', 'Masters in Mathematics', 'danielPass', 'daniel.miller@example.com'),
-( 'Olivia', 'Garcia', '7778889999', '1993-03-27', 'Bachelors in Economics', 'oliviaStrong', 'olivia.garcia@example.com'),
-( 'William', 'Martinez', '9998887777', '1989-12-05', 'Masters in History', 'martinez789', 'william.martinez@example.com'),
-( 'Sophia', 'Robinson', '4445556666', '1994-09-17', 'PhD in Literature', 'sophia789', 'sophia.robinson@example.com'),
-( 'David', 'Clark', '1231231234', '1990-04-11', 'Bachelors in Psychology', 'clarkStrong123', 'david.clark@example.com'),
-('Lily', 'Walker', '3213214321', '1996-02-02', 'Masters in Sociology', 'walkerSecure', 'lily.walker@example.com');
+INSERT INTO contact_support_agent (email, password, first_name, last_name) VALUES 
+('thehara@academix.lk', 'password', 'Thehara', 'Heshanjali'),
+('agent2@academix.lk', 'password', 'Mihiri', 'Fonseka'),
+('agent3@academix.lk', 'password', 'Anuradha', 'Samarasinghe'),
+('agent4@academix.lk', 'password', 'Janaka', 'Rathnayake'),
+('agent5@academix.lk', 'password', 'Thushara', 'Rajapaksha');
 
+INSERT INTO admin (email, password, first_name, last_name) VALUES 
+('sathira@academix.lk', 'password', 'Sathira', 'Kulathunga'),
+('admin2@academix.lk', 'password', 'Kusum', 'Amarasinghe'),
+('admin3@academix.lk', 'password', 'Ranjith', 'Weerasinghe'),
+('admin4@academix.lk', 'password', 'Sujani', 'Gunawardena'),
+('admin5@academix.lk', 'password', 'Ruwanthi', 'Perera');
 
-INSERT INTO admin (email, password, first_name, last_name) VALUES
-('admin1@example.com', 'password123', 'John', 'Doe'),
-('admin2@example.com', 'password456', 'Jane', 'Smith'),
-('admin3@example.com', 'password789', 'Alice', 'Johnson'),
-('admin4@example.com', 'password012', 'Bob', 'Brown'),
-('admin5@example.com', 'password345', 'Charlie', 'Davis');
+INSERT INTO inquiries (inquiry_type, full_name, contact_no, email, address, message, status) VALUES 
+('General Inquiry', 'Harsha Rathnayake', '0779123456', 'harsha.rathnayake@example.com', 'No. 123, Galle Road, Colombo', 'I have a general question regarding your platform.', 'pending'),
+('Payment Inquiry', 'Ruwan Perera', '0778234567', 'ruwan.perera@example.com', 'No. 456, Kandy Road, Kandy', 'Is there any installment payment option?', 'rejected'),
+('Course Inquiry', 'Amila Jayasinghe', '0777345678', 'amila.jayasinghe@example.com', 'No. 789, Hill Street, Nuwara Eliya', 'Can I access all courses after payment?', 'pending'),
+('Technical Support', 'Samanthi Senanayake', '0776456789', 'samanthi.senanayake@example.com', 'No. 321, Lake Road, Kurunegala', 'My course videos are not playing.', 'pending'),
+('Account Issue', 'Thilini Fernando', '0775567890', 'thilini.fernando@example.com', 'No. 654, Park Street, Galle', 'How do I reset my password?', 'checked');
 
-INSERT INTO contact_support_agent (email, password, first_name, last_name) VALUES
-('agent1@example.com', 'agentPassword123', 'Tom', 'Green'),
-('agent2@example.com', 'agentPassword456', 'Lucy', 'White'),
-('agent3@example.com', 'agentPassword789', 'Mike', 'Black'),
-('agent4@example.com', 'agentPassword012', 'Sara', 'Blue'),
-('agent5@example.com', 'agentPassword345', 'Nina', 'Red');
+INSERT INTO course (course_name, level, thumbnail_url, description, published_date, price, duration, subject_id, remarks, status, reviewed_time, reviewer_id, publish_time, publisher_id) VALUES 
+('Basic Mathematics', 'Beginner', 'math_thumbnail.jpg', 'Introduction to Mathematics', '2023-01-15', 2500.00, 40, 1, 'Great course for beginners', 'pending', '2023-01-12 10:30:00', 1, '2023-01-15 14:00:00', 1),
+('Advanced Physics', 'Advanced', 'physics_thumbnail.jpg', 'Learn advanced physics concepts', '2023-03-20', 4500.00, 60, 2, 'Detailed explanations', 'approved', '2023-03-18 12:00:00', 2, '2023-03-20 16:00:00', 2),
+('Introduction to Computer Science', 'Beginner', 'cs_thumbnail.jpg', 'Basic computer science principles', '2023-02-10', 3000.00, 50, 3, 'Ideal for beginners', 'approved', '2023-02-08 11:00:00', 3, '2023-02-10 15:00:00', 3),
+('Business Management Fundamentals', 'Intermediate', 'business_thumbnail.jpg', 'Understand the basics of business management', '2023-04-05', 4000.00, 45, 4, 'Highly recommended', 'approved', '2023-04-03 13:00:00', 4, '2023-04-05 16:30:00', 4),
+('Organic Chemistry', 'Advanced', 'chemistry_thumbnail.jpg', 'Deep dive into organic chemistry', '2023-05-12', 5000.00, 70, 5, 'Great for chemistry students', 'pending', '2023-05-10 14:00:00', 5, '2023-05-12 17:00:00', 5);
+
+INSERT INTO lesson (course_id, video_url, title, description) VALUES 
+(1, 'https://www.youtube.com/embed/6pAG3BHurdM', 'Introduction to Numbers', 'Basic concepts of numbers'),
+(1, 'https://www.youtube.com/embed/2yplBzPCghA', 'Algebra Fundamentals', 'Learn the basics of algebra'),
+(2, 'https://www.youtube.com/embed/cUBz04LlLVk', 'Introduction to Quantum Mechanics', 'Basics of quantum mechanics'),
+(3, 'https://www.youtube.com/embed/QyGwxz9R0Ik', 'Introduction to Programming', 'Learn the basics of programming languages'),
+(4, 'https://www.youtube.com/embed/b_WGoPaNPMY', 'Introduction to Business Management', 'Fundamentals of business management');
+
+INSERT INTO payment (user_id, course_id, method, amount, paid_time) VALUES 
+(1, 1, 'Credit Card', 2500.00, '2023-01-16 12:00:00'),
+(2, 2, 'Bank Transfer', 4500.00, '2023-03-21 13:30:00'),
+(3, 3, 'Credit Card', 3000.00, '2023-02-11 15:00:00'),
+(4, 4, 'Credit Card', 4000.00, '2023-04-06 17:30:00'),
+(5, 5, 'Mobile Payment', 5000.00, '2023-05-13 14:45:00');
+
+INSERT INTO user_course (user_id, course_id, completed_at, start_date) VALUES 
+(1, 1, '2023-02-10 12:00:00', '2023-01-16'),
+(2, 2, '2023-05-10 15:00:00', '2023-03-21'),
+(3, 3, NULL, '2023-02-11'),
+(4, 4, NULL, '2023-04-06'),
+(5, 5, NULL, '2023-05-13');
+
+INSERT INTO user_lesson (user_id, lesson_id, completed_at) VALUES 
+(1, 1, '2023-01-17 12:00:00'),
+(2, 3, '2023-03-22 12:30:00'),
+(3, 4, NULL),
+(4, 5, NULL),
+(5, 2, '2023-01-20 14:00:00');
+
+INSERT INTO user_contact (user_id, contact_no) VALUES 
+(1, '0771234567'),
+(2, '0719876543'),
+(3, '0724567890'),
+(4, '0766543210'),
+(5, '0754321098');
+
+INSERT INTO support_ticket (message, email, first_name, last_name, address, inquiry_type, agent_id) VALUES 
+('I need help with my course enrollment', 'student1@academix.lk', 'Kamal', 'Perera', '123 Main St, Colombo', 'Course Enrollment', 1),
+('My payment failed, please assist', 'student2@academix.lk', 'Nimal', 'Silva', '45 Galle Road, Galle', 'Payment Issue', 2),
+('How do I reset my password?', 'student3@academix.lk', 'Amali', 'Fernando', '78 Kandy Road, Kandy', 'Account Issue', 3),
+('I cannot access the lessons I paid for', 'student4@academix.lk', 'Shanika', 'Wijesinghe', '12 Lake Road, Nuwara Eliya', 'Technical Issue', 4),
+('Need help with course completion', 'student5@academix.lk', 'Ruwan', 'Jayasinghe', '56 Hill Street, Kurunegala', 'Course Issue', 5);
+
+INSERT INTO support_ticket_contact (ticket_id, contact_no) VALUES 
+(1, '0771234567'),
+(2, '0719876543'),
+(3, '0724567890'),
+(4, '0766543210'),
+(5, '0754321098');

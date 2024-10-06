@@ -1,7 +1,7 @@
 <?php
 // Check if user is signed in
 session_start();
-if (!isset($_SESSION['user_id']) && !isset($_SESSION['role']) && $_SESSION['role'] != 'support') {
+if (!isset($_SESSION['user_id']) || !isset($_SESSION['role']) || $_SESSION['role'] != 'support') {
     header("Location: ../../sign-in");
 }
 
@@ -16,5 +16,5 @@ if (isset($_POST['ticket_id'])) {
     $stmt_update->execute();
     $stmt_update->close();
 
-    header("Location: /");
+    header("Location: /support/pending");
 }

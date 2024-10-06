@@ -1,16 +1,13 @@
 <?php
 // Check if user is signed in
 session_start();
-if (!isset($_SESSION['user_id']) && !isset($_SESSION['role']) && $_SESSION['role'] != 'publisher') {
+if (!isset($_SESSION['user_id']) || !isset($_SESSION['role']) || $_SESSION['role'] != 'publisher') {
     header("Location: ../sign-in");
 }
 
 
 include "../utils/db.php";
 
-$sql = "SELECT * from subject;";
-
-$subjectResults = $conn->query($sql);
 if ($_POST) {
     try {
 

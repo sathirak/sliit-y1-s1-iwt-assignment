@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['sign_out'])) {
 
 <!-- Header -->
 <header class="header">
-  <div class="logo">Academix</div>
+  <a class="logo" href="/">Academix</a>
   <nav class="nav">
     <ul class="nav-links">
       <li><a href="/">Home</a></li>

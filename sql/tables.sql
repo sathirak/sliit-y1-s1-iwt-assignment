@@ -1,10 +1,12 @@
--- Create subject table first as it has no foreign keys
+CREATE DATABASE academix;
+
+USE academix;
+
 CREATE TABLE subject (
     subject_id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255)
 );
 
--- Create user table as it's referenced by other tables
 CREATE TABLE user (
     user_id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(100),
@@ -16,7 +18,6 @@ CREATE TABLE user (
     password VARCHAR(255)
 );
 
--- Create course_publisher table before course
 CREATE TABLE course_publisher (
     publisher_id INT PRIMARY KEY AUTO_INCREMENT,
     email VARCHAR(100) UNIQUE,
@@ -28,7 +29,6 @@ CREATE TABLE course_publisher (
     last_name VARCHAR(100)
 );
 
--- Create course_reviewer table before course
 CREATE TABLE course_reviewer (
     reviewer_id INT PRIMARY KEY AUTO_INCREMENT,
     email VARCHAR(100) UNIQUE,
@@ -39,7 +39,37 @@ CREATE TABLE course_reviewer (
     current_position VARCHAR(100)
 );
 
--- Create course table after subject, publisher, and reviewer
+CREATE TABLE contact_support_agent (
+    agent_id INT PRIMARY KEY AUTO_INCREMENT,
+    email VARCHAR(100) UNIQUE,
+    password VARCHAR(255),
+    first_name VARCHAR(100),
+    last_name VARCHAR(100)
+);
+
+CREATE TABLE admin (
+    admin_id INT PRIMARY KEY AUTO_INCREMENT,
+    email VARCHAR(100) UNIQUE,
+    password VARCHAR(255),
+    first_name VARCHAR(100),
+    last_name VARCHAR(100)
+);
+
+CREATE TABLE inquiries (
+  id INT NOT NULL AUTO_INCREMENT,
+  inquiry_type VARCHAR(255) DEFAULT NULL,
+  full_name VARCHAR(255) DEFAULT NULL,
+  contact_no VARCHAR(20) DEFAULT NULL,
+  email VARCHAR(255) DEFAULT NULL,
+  address VARCHAR(255) DEFAULT NULL,
+  message TEXT,
+  status VARCHAR(255) DEFAULT 'Pending',
+  created_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id)
+);
+
+
+
 CREATE TABLE course (
     course_id INT PRIMARY KEY AUTO_INCREMENT,
     course_name VARCHAR(255),
@@ -61,7 +91,6 @@ CREATE TABLE course (
     FOREIGN KEY (publisher_id) REFERENCES course_publisher(publisher_id)
 );
 
--- Create lesson table after course
 CREATE TABLE lesson (
     lesson_id INT PRIMARY KEY AUTO_INCREMENT,
     course_id INT,
@@ -71,7 +100,6 @@ CREATE TABLE lesson (
     FOREIGN KEY (course_id) REFERENCES course(course_id)
 );
 
--- Create payment table after user and course
 CREATE TABLE payment (
     payment_id INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT,
@@ -83,7 +111,6 @@ CREATE TABLE payment (
     FOREIGN KEY (course_id) REFERENCES course(course_id)
 );
 
--- Create user_course table after user and course
 CREATE TABLE user_course (
     user_id INT,
     course_id INT,
@@ -94,7 +121,6 @@ CREATE TABLE user_course (
     FOREIGN KEY (course_id) REFERENCES course(course_id)
 );
 
--- Create user_lesson table after user and lesson
 CREATE TABLE user_lesson (
     user_id INT,
     lesson_id INT,
@@ -104,7 +130,6 @@ CREATE TABLE user_lesson (
     FOREIGN KEY (lesson_id) REFERENCES lesson(lesson_id)
 );
 
--- Create user_contact table after user
 CREATE TABLE user_contact (
     user_id INT,
     contact_no VARCHAR(20),
@@ -112,16 +137,8 @@ CREATE TABLE user_contact (
     FOREIGN KEY (user_id) REFERENCES user(user_id)
 );
 
--- Create support_ticket table after contact_support_agent
-CREATE TABLE contact_support_agent (
-    agent_id INT PRIMARY KEY AUTO_INCREMENT,
-    email VARCHAR(100) UNIQUE,
-    password VARCHAR(255),
-    first_name VARCHAR(100),
-    last_name VARCHAR(100)
-);
 
--- Create support_ticket after contact_support_agent
+
 CREATE TABLE support_ticket (
     ticket_id INT PRIMARY KEY AUTO_INCREMENT,
     message TEXT,
@@ -134,32 +151,9 @@ CREATE TABLE support_ticket (
     FOREIGN KEY (agent_id) REFERENCES contact_support_agent(agent_id)
 );
 
--- Create support_ticket_contact after support_ticket
 CREATE TABLE support_ticket_contact (
     ticket_id INT,
     contact_no VARCHAR(20),
     PRIMARY KEY (ticket_id, contact_no),
     FOREIGN KEY (ticket_id) REFERENCES support_ticket(ticket_id)
-);
-
--- Create admin table (standalone)
-CREATE TABLE admin (
-    admin_id INT PRIMARY KEY AUTO_INCREMENT,
-    email VARCHAR(100) UNIQUE,
-    password VARCHAR(255),
-    first_name VARCHAR(100),
-    last_name VARCHAR(100)
-);
-
-CREATE TABLE inquiries (
-  id INT NOT NULL AUTO_INCREMENT,
-  inquiry_type VARCHAR(255) DEFAULT NULL,
-  full_name VARCHAR(255) DEFAULT NULL,
-  contact_no VARCHAR(20) DEFAULT NULL,
-  email VARCHAR(255) DEFAULT NULL,
-  address VARCHAR(255) DEFAULT NULL,
-  message TEXT,
-  status VARCHAR(255) DEFAULT 'Pending',
-  created_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (id)
 );
