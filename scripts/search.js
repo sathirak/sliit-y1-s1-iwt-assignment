@@ -1,16 +1,6 @@
-function debounce(func, delay) {
-  let timeout;
-  return function () {
-    const context = this,
-      args = arguments;
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func.apply(context, args), delay);
-  };
-}
-
 function searchCourses() {
   const searchInput = document.getElementById('search-input').value;
-  const userList = document.getElementById('user-list');
+  const userList = document.getElementById('search-list');
   const spinner = document.getElementById('loading-spinner');
 
   spinner.style.display = 'block';
@@ -20,7 +10,7 @@ function searchCourses() {
     .then((html) => {
       userList.innerHTML = new DOMParser()
         .parseFromString(html, 'text/html')
-        .querySelector('#user-list').innerHTML;
+        .querySelector('#search-list').innerHTML;
       spinner.style.display = 'none';
     })
     .catch((error) => {
@@ -31,15 +21,4 @@ function searchCourses() {
 
 document
   .getElementById('search-input')
-  .addEventListener('input', debounce(searchCourses, 300));
-
-document.addEventListener('click', function (e) {
-  if (e.target && e.target.classList.contains('delete')) {
-    const confirmDelete = confirm(
-      'Are you sure you want to delete this course?',
-    );
-    if (!confirmDelete) {
-      e.preventDefault();
-    }
-  }
-});
+  .addEventListener('input', searchCourses());

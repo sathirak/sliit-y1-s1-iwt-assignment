@@ -1,0 +1,185 @@
+/* General styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+.container {
+    display: flex;
+    margin: 20px;
+}
+
+a:hover, a.active {
+    background: none;
+    color: #0077ff;
+}
+
+nav1 {
+    width: 200px;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+nav1 ul {
+    list-style: none;
+}
+
+nav1 ul li {
+    padding: 10px 0;
+}
+
+nav1 ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* Main section styles */
+main-section {
+    flex: auto;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* New grid layout for tickets with 3 items per row */
+.ticket-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    gap: 20px;
+    align-items: stretch;
+}
+
+/* Adjust grid for smaller screens (responsive) */
+@media (max-width: 1024px) {
+    .ticket-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .ticket-grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 item per row for small screens */
+    }
+}
+
+/* Style for individual tickets */
+.ticket {
+    background-color: rgb(228, 241, 255);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ticket h3 {
+    color: #0033cc; /* Blue header color */
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.ticket p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.ticket p strong {
+    color: black;
+}
+
+/* Action button styles */
+.ticket-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+
+/* Check and Reject buttons */
+.ticket-actions .view-details, .ticket-actions .reject , .ticket-actions  .view-btn{
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.view-details {
+    background-color: #007bff;
+    color: white;
+}
+
+.reject {
+    background-color: #dc3545;
+    color: white;
+}
+
+.view-btn{
+    background-color: #007bff;
+    color: white;
+}
+
+button:hover {
+    background-color: #79b8ff;
+}
+
+/* Status badges */
+.status-checked {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.status-rejected {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

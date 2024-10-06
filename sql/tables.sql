@@ -150,3 +150,16 @@ CREATE TABLE admin (
     first_name VARCHAR(100),
     last_name VARCHAR(100)
 );
+
+CREATE TABLE inquiries (
+  id INT NOT NULL AUTO_INCREMENT,
+  inquiry_type VARCHAR(255) DEFAULT NULL,
+  full_name VARCHAR(255) DEFAULT NULL,
+  contact_no VARCHAR(20) DEFAULT NULL,
+  email VARCHAR(255) DEFAULT NULL,
+  address VARCHAR(255) DEFAULT NULL,
+  message TEXT,
+  status VARCHAR(255) DEFAULT 'Pending',
+  created_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id)
+);

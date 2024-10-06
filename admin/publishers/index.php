@@ -68,7 +68,7 @@ if (!isset($_SESSION['user_id']) && !isset($_SESSION['role']) && $_SESSION['role
 
             <div class="loading-spinner" id="loading-spinner"></div>
 
-            <div class="user-list" id="user-list">
+            <div class="search-list" id="search-list">
                 <?php if ($result->num_rows > 0): ?>
                     <?php while ($row = $result->fetch_assoc()): ?>
                         <div class='user-box'>
@@ -86,7 +86,7 @@ if (!isset($_SESSION['user_id']) && !isset($_SESSION['role']) && $_SESSION['role
                         </div>
                     <?php endwhile; ?>
                 <?php else: ?>
-                    <p>No courses found for your search.</p>
+                    <p>No publishers found for your search.</p>
                 <?php endif; ?>
             </div>
 

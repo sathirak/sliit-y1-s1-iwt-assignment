@@ -191,3 +191,10 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
+
+.course-weeks {
+  margin-inline: 10px;
+  background-color: var(--app-mute);
+  border-radius: 1rem;
+  padding: 5px 15px;
+}

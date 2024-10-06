@@ -30,7 +30,7 @@
   text-decoration: none;
 }
 
-.user-list {
+.search-list {
   display: flex;
   flex-direction: column;
   width: 30vw;
