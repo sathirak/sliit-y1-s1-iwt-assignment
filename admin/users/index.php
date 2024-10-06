@@ -67,7 +67,7 @@
 
             <div class="loading-spinner" id="loading-spinner"></div>
 
-            <div class="user-list" id="user-list">
+            <div class="search-list" id="search-list">
                 <?php if ($result->num_rows > 0): ?>
                     <?php while ($row = $result->fetch_assoc()): ?>
                         <div class='user-box'>
