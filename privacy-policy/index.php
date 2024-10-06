@@ -26,12 +26,16 @@ session_start();
             <div class="header-0">
                 <h3>About Us</h3>
             </div>
+
+
+
             <p>At AcademiX Pvt Ltd, we are dedicated to empowering educators with the skills and
                 tools they need to thrive in today ever-evolving classroom environments. Our online teacher training
                 platform provides high-quality, flexible, and comprehensive courses designed by expert educators and
                 trainers. We focus on practical, research-based strategies that enhance teaching effectiveness, promote
                 student engagement, and foster lifelong learning. Whether you're a new teacher or a seasoned educator,
                 our mission is to support your professional growth and help you make a lasting impact in education.</p>
+
         </div>
 
         <div class="inner">
@@ -41,7 +45,9 @@ session_start();
             <p>This privacy notice, which may also be referred to as a “privacy policy” on some of our websites, covers
                 personal information, including any information we collect, use and share from you, as described further
                 below.
+
                 This privacy notice applies to all websites and brands in the AcademiX Pvt Ltd and Name Birth
+
                 Pvt
                 Ltd
                 family, our products and services, and our mobile applications (collectively, the “Services”). This
@@ -201,7 +207,9 @@ session_start();
             <p>As further described below, we will only share certain personal information with:</p>
             <div class="list">
                 <ul>
+
                     <li>Other members of the AcademiX Pvt Ltd corporate family;</li>
+
                     <li>Our partners;</li>
                     <li>Third party service providers and vendors;</li>
                     <li>In connection with a sale, merger, acquisition or corporate reorganization;</li>
@@ -209,6 +217,7 @@ session_start();
                     <li>For legal reasons.</li>
                 </ul>
             </div>
+
 
             <div class="header-1">
                 <h4>Sharing with Partners</h4>
@@ -508,7 +517,9 @@ session_start();
                 <h3>Complaints</h3>
             </div>
             <p>If you have any questions about this privacy notice or our data handling practices, or you wish to make a
+
                 complaint, you may contact our Data Protection Officer at privacy@academix.lk.</p>
+
         </div>
 
     </div>

@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO user (first_name, last_name, contact_no, date_of_birth, highest_qualification, password, email) VALUES ('$fname', '$lname', '$contact', '$dob', '$h_qualification', '$u_password', '$email');"; 
 
     $result = $conn->query($sql);
-
+    header("Location: ../user");
     if (!$result) {
         die("Invalid query: " . $conn->error);
     }
