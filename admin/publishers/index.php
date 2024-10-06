@@ -86,7 +86,7 @@ if (!isset($_SESSION['user_id']) && !isset($_SESSION['role']) && $_SESSION['role
                         </div>
                     <?php endwhile; ?>
                 <?php else: ?>
-                    <p>No courses found for your search.</p>
+                    <p>No publishers found for your search.</p>
                 <?php endif; ?>
             </div>
 

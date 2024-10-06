@@ -85,7 +85,7 @@
                         </div>
                     <?php endwhile; ?>
                 <?php else: ?>
-                    <p>No courses found for your search.</p>
+                    <p>No users found for your search.</p>
                 <?php endif; ?>
             </div>
 
