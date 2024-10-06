@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-
+<head> 
     <?php
-    include "../components/layout/html.php";
-    include "../utils/db.php";
+        include "../components/layout/html.php";
+        include "../utils/db.php";
     ?>
 
     <link rel="stylesheet" href="../styles/global.css">
@@ -15,16 +14,14 @@
 </head>
 
 <body>
-    <?php
+    <?php 
+        $sql = "SELECT * FROM course";
+        $result = $conn->query($sql);
 
-    $sql = "SELECT * FROM course";
-    $result = $conn->query($sql);
-
-    if (!$result) {
-        die("Invalid query: " . $conn->error);
-    }
-
-    include "../components/layout/header.php";
+        if (!$result) {
+            die("Invalid query: " . $conn->error);
+        } 
+        include "../components/layout/header.php";
     ?>
 
     <main>
