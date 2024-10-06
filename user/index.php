@@ -6,7 +6,7 @@ if (!isset($_SESSION['user_id']) && !isset($_SESSION['role']) && $_SESSION['role
 
 include "../utils/db.php";
 
-$sql = "SELECT * FROM users WHERE user_id = '$user_id'";
+$sql = "SELECT * FROM user WHERE user_id = '$user_id'";
 $result = $conn->query($sql);
 $user = $result->fetch_assoc();
 

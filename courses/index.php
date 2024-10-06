@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-
+<head> 
     <?php
-    include "../components/layout/html.php";
-    include "../utils/db.php";
+        include "../components/layout/html.php";
+        include "../utils/db.php";
     ?>
 
     <link rel="stylesheet" href="../styles/global.css">
@@ -15,16 +14,14 @@
 </head>
 
 <body>
-    <?php
+    <?php 
+        $sql = "SELECT * FROM course";
+        $result = $conn->query($sql);
 
-    $sql = "SELECT * FROM course";
-    $result = $conn->query($sql);
-
-    if (!$result) {
-        die("Invalid query: " . $conn->error);
-    }
-
-    include "../components/layout/header.php";
+        if (!$result) {
+            die("Invalid query: " . $conn->error);
+        } 
+        include "../components/layout/header.php";
     ?>
 
     <main>
@@ -57,7 +54,7 @@
                                                 <p class='card-text'><strong>Published Date:</strong> {$row['published_date']}</p>
                                                 <p class='card-text'><strong>Price:</strong> \${$row['price']}</p>
                                                 <p class='card-text'><strong>Duration:</strong> {$row['duration']} Weeks</p>
-                                                <a class='btn btn-primary btn-sm' href='../all-courses/edit.php?id={$row['course_id']}'>View</a>
+                                                <a class='btn btn-primary btn-sm' href='../courses/watch.php?course_id={$row['course_id']}'>View</a>
                                             </div>
                                         </div>
                                     </div>

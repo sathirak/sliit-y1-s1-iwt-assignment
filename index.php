@@ -9,9 +9,7 @@ session_start();
 
     <title>Academix</title>
 
-    <?php
-    include "components/layout/html.php";
-    ?>
+    <?php include "components/layout/html.php";  ?>
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/components.css">
 </head>
@@ -29,7 +27,7 @@ session_start();
                     Empowering Educators, Shaping Futures
                 </h1>
                 <p class="main-para">Learn from hundreds of educational courses made by seasoned professionals to improve your teaching skills</p>
-                <a href="/all-courses"><button class="button">Get Started</button></a>
+                <a href="/courses"><button class="button">Get Started</button></a>
             </div>
 
 
