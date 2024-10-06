@@ -1,8 +1,14 @@
 <?php
     include "../utils/db.php";
 
-    $courseId = $_GET['course_id'];
-    $lessonId = $_GET['lesson_id'];
+    $courseId = $_GET['course_id'] ?? null;
+    $lessonId = $_GET['lesson_id'] ?? null;
+
+    if (!is_numeric($courseId)) {
+        header('Location: /courses');
+        exit;
+    }
+
 
     if (!is_numeric($courseId)) {
         header('Location: /');
@@ -67,7 +73,7 @@
                         $selectedLesson = $row;
                     }
 
-                    echo "<a href='/course/watch.php?course_id=" . $courseId . "&lesson_id=" . $row['lesson_id'] . "' class='lesson-item'>Lesson " . $index . " : " . $row['title'] . " </a>";
+                    echo "<a href='/courses/watch.php?course_id=" . $courseId . "&lesson_id=" . $row['lesson_id'] . "' class='lesson-item'>Lesson " . $index . " : " . $row['title'] . " </a>";
                 }
             ?> 
             
