@@ -1,5 +1,4 @@
 <?php
-
 $auth_info = [
     "user" => ["table" => "user", "id_field" => "user_id", "redirect" => "../user", "button" => "Dashboard"],
     "admin" => ["table" => "admin", "id_field" => "admin_id", "redirect" => "../admin", "button" => "Administrator"],
