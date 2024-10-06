@@ -9,7 +9,7 @@ session_start();
 
     <title>Academix</title>
 
-    <?php include "components/layout/html.php";  ?>
+    <?php include "components/html.php";  ?>
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/components.css">
     <link rel="stylesheet" href="styles/main.css">
@@ -18,7 +18,7 @@ session_start();
 <body>
 
     <?php
-    include "components/layout/header.php";
+    include "components/header.php";
     ?>
 
     <main>
@@ -31,7 +31,7 @@ session_start();
                     levels. Learn innovative strategies, master new technologies, and enhance your teaching techniques
                     with guidance from top educators and industry professionals.</p>
                     <br>
-                <a href="all-courses/index.php"><button class="button">Get Started</button></a>
+                <a href="/courses"><button class="button">Get Started</button></a>
             </div>
             <img class="main-banner" src="assets/images/mb.png" alt="Main Banner of Academix">
         </div>
@@ -41,7 +41,7 @@ session_start();
 
 
     <?php
-    include "components/layout/footer.php";
+    include "components/footer.php";
     ?>
 
 </body>

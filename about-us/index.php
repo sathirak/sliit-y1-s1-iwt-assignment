@@ -7,7 +7,7 @@ session_start();
 
 <head>
     <?php
-    include "../components/layout/html.php";
+    include "../components/html.php";
     ?>
 
     <title>About-Us</title>
@@ -20,7 +20,7 @@ session_start();
 <body>
 
     <?php
-    include "../components/layout/header.php";
+    include "../components/header.php";
     ?>
 
     <main>
@@ -78,7 +78,7 @@ session_start();
 
 
     <?php
-    include "../components/layout/footer.php";
+    include "../components/footer.php";
     ?>
 
 </body>

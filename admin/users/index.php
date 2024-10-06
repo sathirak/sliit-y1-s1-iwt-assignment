@@ -10,7 +10,7 @@
 <head>
 
     <?php
-    include "../../components/layout/html.php";
+    include "../../components/html.php";
     include "../../utils/db.php";
 
     $search_query = isset($_GET['search']) ? $conn->real_escape_string($_GET['search']) : '';
@@ -42,7 +42,7 @@
 <body>
 
     <?php
-    include "../../components/layout/header.php";
+    include "../../components/header.php";
     ?>
 
     <div class="container">
@@ -94,7 +94,7 @@
     </div>
 
     <?php
-    include "../../components/layout/footer.php";
+    include "../../components/footer.php";
     ?>
     <script src="../../scripts/search.js"></script>
 </body>

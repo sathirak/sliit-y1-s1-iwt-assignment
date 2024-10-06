@@ -82,7 +82,7 @@ $conn->close();
 </head>
 
 <?php
-include "../components/layout/header.php";
+include "../components/header.php";
 ?>
 
 <body>

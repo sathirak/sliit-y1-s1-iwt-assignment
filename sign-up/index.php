@@ -7,7 +7,7 @@ session_start()
 <head>
 
     <?
-    include "../components/layout/html.php";
+    include "../components/html.php";
     ?>
 
     <link rel="stylesheet" href="../styles/global.css">

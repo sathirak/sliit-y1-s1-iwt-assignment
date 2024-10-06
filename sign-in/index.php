@@ -8,7 +8,7 @@ session_start()
 <head>
 
     <?
-    include "../components/layout/html.php";
+    include "../components/html.php";
     include "../utils/db.php";
     ?>
 

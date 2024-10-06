@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <?php include "../components/layout/html.php"; ?>
+  <?php include "../components/html.php"; ?>
   <title>FAQ</title>
 
   <link rel="stylesheet" href="../styles/global.css" />
@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <?php include "../components/layout/header.php"; ?>
+  <?php include "../components/header.php"; ?>
   <main>
 
     <div class="hero">
@@ -108,7 +108,7 @@
     </section>
   </main>
 
-  <?php include "../components/layout/footer.php"; ?>
+  <?php include "../components/footer.php"; ?>
 </body>
 
 </html>

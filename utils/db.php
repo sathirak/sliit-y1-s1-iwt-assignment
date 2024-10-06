@@ -1,4 +1,7 @@
 <?php
+
+// DB config that is used throughout the system
+
 $servername = "sql12.freesqldatabase.com";
 $username = "sql12734758";
 $password = "f2SmwnMj6g";

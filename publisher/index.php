@@ -1,4 +1,5 @@
 <?php
+// Check if user is signed in
 session_start();
 if (!isset($_SESSION['user_id']) && !isset($_SESSION['role']) && $_SESSION['role'] != 'publisher') {
     header("Location: ../sign-in");
@@ -18,7 +19,7 @@ if (!isset($_SESSION['user_id']) && !isset($_SESSION['role']) && $_SESSION['role
 </head>
 
 <body>
-    <?php include "../components/layout/header.php"; ?>
+    <?php include "../components/header.php"; ?>
     <div class="container">
         <h1>Create New Course with Lessons</h1>
         <form id="courseForm" method="POST" action="publish.php">
@@ -59,9 +60,9 @@ if (!isset($_SESSION['user_id']) && !isset($_SESSION['role']) && $_SESSION['role
         </form>
     </div>
 
-    <script src="../../scripts/createCourse.js"></script>
+    <script src="../../scripts/create-course.js"></script>
 
-    <?php include "../components/layout/footer.php"; ?>
+    <?php include "../components/footer.php"; ?>
 </body>
 
 </html>

@@ -48,7 +48,7 @@
 
 <body>
 
-<?php include "../components/layout/header.php"; ?>
+<?php include "../components/header.php"; ?>
 
     <div class="container">
         <div class="course-header">
@@ -89,6 +89,6 @@
         </div>
     </div>
 
-    <?php include "../components/layout/footer.php"; ?>
+    <?php include "../components/footer.php"; ?>
 </body>
 </html>

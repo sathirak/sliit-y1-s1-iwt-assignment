@@ -1,4 +1,5 @@
 <?php
+// Check if user is signed in
 session_start();
 if (!isset($_SESSION['user_id']) && !isset($_SESSION['role']) && $_SESSION['role'] != 'user') {
     header("Location: ../sign-in");
@@ -17,7 +18,7 @@ $user = $result->fetch_assoc();
 
 <head>
     <?php
-    include "../components/layout/html.php";
+    include "../components/html.php";
     ?>
     <title>User Dashboard</title>
 
@@ -168,7 +169,7 @@ $user = $result->fetch_assoc();
 
                 <div class="footer">
                     <?php
-                    include "../components/layout/footer.php";
+                    include "../components/footer.php";
                     ?>
                 </div>
             </div>

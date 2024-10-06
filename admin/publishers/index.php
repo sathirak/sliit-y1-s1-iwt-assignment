@@ -1,4 +1,5 @@
 <?php
+// Check if user is signed in
 session_start();
 if (!isset($_SESSION['user_id']) && !isset($_SESSION['role']) && $_SESSION['role'] != 'admin') {
     header("Location: ../sign-in");
@@ -11,7 +12,7 @@ if (!isset($_SESSION['user_id']) && !isset($_SESSION['role']) && $_SESSION['role
 <head>
 
     <?php
-    include "../../components/layout/html.php";
+    include "../../components/html.php";
     include "../../utils/db.php";
 
     $search_query = isset($_GET['search']) ? $conn->real_escape_string($_GET['search']) : '';
@@ -43,7 +44,7 @@ if (!isset($_SESSION['user_id']) && !isset($_SESSION['role']) && $_SESSION['role
 <body>
 
     <?php
-    include "../../components/layout/header.php";
+    include "../../components/header.php";
     ?>
 
     <div class="container">
@@ -95,7 +96,7 @@ if (!isset($_SESSION['user_id']) && !isset($_SESSION['role']) && $_SESSION['role
     </div>
 
     <?php
-    include "../../components/layout/footer.php";
+    include "../../components/footer.php";
     ?>
     <script src="../../scripts/search.js"></script>
 </body>

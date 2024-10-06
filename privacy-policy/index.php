@@ -7,7 +7,7 @@ session_start();
 
 <head>
     <?php
-    include "../components/layout/html.php";
+    include "../components/html.php";
     ?>
 
     <link rel="stylesheet" href="../styles/global.css">
@@ -18,7 +18,7 @@ session_start();
 </head>
 
 <body>
-    <?php include "../components/layout/header.php";
+    <?php include "../components/header.php";
     ?>
 
     <div class="content">
@@ -523,7 +523,7 @@ session_start();
         </div>
 
     </div>
-    <?php include "../components/layout/footer.php";
+    <?php include "../components/footer.php";
     ?>
 </body>
 

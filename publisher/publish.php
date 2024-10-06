@@ -1,4 +1,5 @@
 <?php
+// Check if user is signed in
 session_start();
 if (!isset($_SESSION['user_id']) && !isset($_SESSION['role']) && $_SESSION['role'] != 'publisher') {
     header("Location: ../sign-in");

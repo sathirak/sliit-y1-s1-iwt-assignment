@@ -1,4 +1,5 @@
 <?php
+// Check if user is signed in
 session_start();
 if (!isset($_SESSION['user_id']) && !isset($_SESSION['role']) && $_SESSION['role'] != 'support') {
     header("Location: ../../sign-in");
@@ -14,7 +15,7 @@ $result = $conn->query($sql);
 <html lang="en">
 
 <head>
-    <?php include "../../components/layout/html.php"; ?>
+    <?php include "../../components/html.php"; ?>
     <title>Pending Tickets</title>
     <link rel="stylesheet" href="../../styles/global.css">
     <link rel="stylesheet" href="../../styles/components.css">
@@ -23,7 +24,7 @@ $result = $conn->query($sql);
 
 <body>
 
-    <?php include "../../components/layout/header.php"; ?>
+    <?php include "../../components/header.php"; ?>
 
     <main>
         <div class="container">
@@ -95,7 +96,7 @@ $result = $conn->query($sql);
         </div>
     </div>
 
-    <?php include "../../components/layout/footer.php"; ?>
+    <?php include "../../components/footer.php"; ?>
 
     <!-- Include the external JavaScript file -->
     <script src="../../scripts/tickets.js"></script>
